@@ -527,3 +527,700 @@ DEBUG - 2026-11-02 11:47:02 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-11-02 11:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-02 11:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-02 11:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-02 15:14:06 --> Table 'db_barber.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `role` = :role:', [...], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PosController.php(22): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PosController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 15:14:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.users' doesn't exist
+[Method: GET, Route: admin/pos]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `role` = :role:', [...], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\PosController.php(22): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\PosController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PosController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 15:14:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `role` = :role:', [...], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\PosController.php(22): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\PosController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PosController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 15:14:06 --> [Caused by] mysqli_sql_exception: Table 'db_barber.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `role` = \'barber\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `role` = :role:', [...], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\PosController.php(22): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\PosController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PosController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 15:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 15:59:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:07:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 16:22:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layout/main.php"
+[Method: GET, Route: admin/reports/transactions]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layout/main.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/reports/transactions', [], true)
+ 4 APPPATH\Controllers\Admin\Transaksi\ReportController.php(38): view('admin/reports/transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Transaksi\ReportController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi\ReportController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 16:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-02 16:31:03 --> Duplicate column name 'status'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(779): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-02-000006_add_columns_to_transactions.php(25): CodeIgniter\Database\Forge->addColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddColumnsToTransactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-02 16:31:53 --> Duplicate column name 'status'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(779): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-02-000006_add_columns_to_transactions.php(25): CodeIgniter\Database\Forge->addColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddColumnsToTransactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2026-11-02 16:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 16:33:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layout/main.php"
+[Method: GET, Route: admin/reports/transactions]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layout/main.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/reports/transactions', [], true)
+ 4 APPPATH\Controllers\Admin\Transaksi\ReportController.php(38): view('admin/reports/transactions', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Transaksi\ReportController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi\ReportController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 16:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 16:35:50 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/reports/cancel-transaction/4]
+in SYSTEMPATH\BaseModel.php on line 1057.
+ 1 SYSTEMPATH\BaseModel.php(1057): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin\Transaksi\ReportController.php(96): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Transaksi\ReportController->cancel('4')
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 16:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 16:35:59 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/reports/cancel-transaction/4]
+in SYSTEMPATH\BaseModel.php on line 1057.
+ 1 SYSTEMPATH\BaseModel.php(1057): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(728): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Admin\Transaksi\ReportController.php(96): CodeIgniter\Model->update('4', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Transaksi\ReportController->cancel('4')
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Transaksi\ReportController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 16:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 16:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-02 17:07:50 --> Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (:name:, :username:, :email:, :role:, :password:, :is_active:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\User\UserController.php(23): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\UserController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:07:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+[Method: POST, Route: admin/users/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (:name:, :username:, :email:, :role:, :password:, :is_active:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Admin\User\UserController.php(23): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\UserController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:07:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (:name:, :username:, :email:, :role:, :password:, :is_active:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Admin\User\UserController.php(23): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\UserController->store()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:07:50 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (\'Dyan Santoso\', \'1212\', \'dyanputra1997@gmail.com\', \'admin\', \'$2y$10$sdjiauZ7IPSRVn.An56lVekLc5XQM7MmFjP6.C8f3s0MPZ.5berwe\', 1, \'2026-11-02 17:07:50\', \'2026-11-02 17:07:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `username`, `email`, `role`, `password`, `is_active`, `created_at`, `updated_at`) VALUES (:name:, :username:, :email:, :role:, :password:, :is_active:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(358): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(671): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Admin\User\UserController.php(23): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\UserController->store()
+11 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-02 17:09:32 --> Duplicate column name 'status'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(779): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-02-000006_add_columns_to_transactions.php(25): CodeIgniter\Database\Forge->addColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddColumnsToTransactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-02 17:09:51 --> Duplicate column name 'status'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(779): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-02-000006_add_columns_to_transactions.php(25): CodeIgniter\Database\Forge->addColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddColumnsToTransactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-02 17:10:50 --> Duplicate column name 'status'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('ALTER TABLE `transactions`
+	ADD `status` VARCHAR(20) DEFAULT \'success\' AFTER `id`,
+	ADD `cancellation_reason` TEXT NULL AFTER `status`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `transactions`
+	ADD `status` VARCHAR(20) DEFAULT \'success\' AFTER `id`,
+	ADD `cancellation_reason` TEXT NULL AFTER `status`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `transactions`
+	ADD `status` VARCHAR(20) DEFAULT \'success\' AFTER `id`,
+	ADD `cancellation_reason` TEXT NULL AFTER `status`')
+ 4 SYSTEMPATH\Database\Forge.php(779): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `transactions`
+	ADD `status` VARCHAR(20) DEFAULT \'success\' AFTER `id`,
+	ADD `cancellation_reason` TEXT NULL AFTER `status`')
+ 5 APPPATH\Database\Migrations\2026-11-02-000006_add_columns_to_transactions.php(25): CodeIgniter\Database\Forge->addColumn('transactions', [...])
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddColumnsToTransactions->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-11-02 17:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 17:18:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 17:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 17:25:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:26:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:26:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:26:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 17:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 17:26:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/user/logs.php"
+[Method: GET, Route: admin/users/logs]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user/logs.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/user/logs', [], true)
+ 3 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/user/logs', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:27:22 --> ErrorException: Undefined array key "created_at"
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Views\admin\users\logs.php on line 38.
+ 1 APPPATH\Views\admin\users\logs.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "created_at"', 'C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php', 38)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/users/logs', [], true)
+ 5 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/users/logs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:29:30 --> ErrorException: Undefined array key "created_at"
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Views\admin\users\logs.php on line 38.
+ 1 APPPATH\Views\admin\users\logs.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "created_at"', 'C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php', 38)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/users/logs', [], true)
+ 5 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/users/logs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-02 17:29:31 --> ErrorException: Undefined array key "created_at"
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Views\admin\users\logs.php on line 38.
+ 1 APPPATH\Views\admin\users\logs.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "created_at"', 'C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php', 38)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\barber_app\\app\\Views\\admin\\users\\logs.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/users/logs', [], true)
+ 5 APPPATH\Controllers\Admin\User\LogController.php(20): view('admin/users/logs', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\LogController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\LogController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-02 17:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-02 17:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-02 17:42:16 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:42:20 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:42:59 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:43:01 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:43:01 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:43:01 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-11-02 17:43:02 --> ErrorException: Cannot declare class App\Controllers\Admin\User\LogController, because the name is already in use
+[Method: GET, Route: admin/users/logs]
+in APPPATH\Models\ActivityLogModel.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2026-11-02 17:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

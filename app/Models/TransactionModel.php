@@ -9,12 +9,15 @@ class TransactionModel extends Model
     protected $table            = 'transactions';
     protected $primaryKey       = 'id';
     protected $allowedFields    = [
-        'invoice_code',
-        'customer_name',
-        'total_amount',
-        'payment_method',
-        'is_active',
-        'created_at'
+        'invoice_code', 
+        'customer_name', 
+        'total_amount', 
+        'payment_method', 
+        'status',              
+        'cancellation_reason', 
+        'is_active', 
+        'created_at', 
+        'updated_at'
     ];
     protected $useTimestamps    = false; // Disesuaikan dengan tabel yang tidak pakai updated_at
 }
