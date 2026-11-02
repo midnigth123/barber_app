@@ -67,11 +67,22 @@
     }
 
     .sidebar-menu {
-        padding: 20px 15px;
+        padding: 20px 15px 20px 24px;
+        /* <-- Menu digeser sedikit ke kanan */
         list-style: none;
         margin: 0;
         flex-grow: 1;
         overflow-y: auto;
+    }
+
+    .sidebar-category {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: #6c757d;
+        padding: 12px 15px 6px 5px;
+        margin-top: 10px;
+        text-transform: uppercase;
     }
 
     .sidebar-menu li {
@@ -141,7 +152,7 @@
         flex-grow: 1;
     }
 
-    /* Dropdown Profil ala SIMRS di Pojok Kanan Atas */
+    /* Dropdown Profil di Pojok Kanan Atas */
     .user-profile-dropdown {
         position: relative !important;
     }
@@ -156,7 +167,6 @@
         left: auto !important;
         top: 5% !important;
         margin-top: 2px !important;
-        /* Dibuat sangat rapat dengan navbar */
         width: 320px !important;
         padding: 20px !important;
         border-radius: 12px !important;
@@ -165,7 +175,6 @@
         z-index: 2147483647 !important;
     }
 
-    /* Panah kecil di atas kotak dropdown agar pas menunjuk ke ikon */
     .user-profile-dropdown .dropdown-menu::before {
         content: "";
         position: absolute;
@@ -180,7 +189,7 @@
         z-index: 2147483648 !important;
     }
 
-    /* PENGATURAN MODAL GANTI PASSWORD (Tetap di Tengah) */
+    /* Modal Styling */
     .modal {
         z-index: 9999999 !important;
     }
@@ -212,7 +221,7 @@
         }
     }
 
-    /* Efek transisi putar panah dropdown */
+    /* Transisi Dropdown & Sub-Menu */
     .menu-toggle .bi-chevron-down {
         transition: transform 0.3s ease;
     }
@@ -221,27 +230,6 @@
         transform: rotate(180deg);
     }
 
-    /* Styling sub-menu vertikal tanpa background */
-    .sidebar-category {
-        font-size: 11px;
-        letter-spacing: 0.8px;
-        font-weight: 700;
-        color: #6c757d;
-        padding: 12px 15px 6px 15px;
-        margin-top: 10px;
-        text-transform: uppercase;
-    }
-
-    /* Transisi panah dropdown */
-    .menu-toggle .bi-chevron-down {
-        transition: transform 0.3s ease;
-    }
-
-    .menu-toggle[aria-expanded="true"] .bi-chevron-down {
-        transform: rotate(180deg);
-    }
-
-    /* Sub-menu tanpa background */
     .sidebar-submenu {
         padding-left: 15px;
         margin-top: 2px;
@@ -329,7 +317,6 @@
                         <i class="bi bi-people-fill text-warning"></i>
                         <span>Manajemen Pengguna</span>
                     </div>
-                    <!-- Ikon panah dipastikan ada di sini -->
                     <i class="bi bi-chevron-down text-warning small ms-auto"></i>
                 </a>
 
@@ -436,7 +423,7 @@
 
     </div>
 
-    <!-- MODAL GANTI PASSWORD ELEGANT & RESPONSIVE (Tetap di Tengah) -->
+    <!-- MODAL GANTI PASSWORD ELEGANT & RESPONSIVE -->
     <div class="modal fade" id="editPasswordModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <form action="<?= base_url('admin/update-password') ?>" method="post" class="w-100">
@@ -478,6 +465,7 @@
             </form>
         </div>
     </div>
+
     <!-- MODAL EDIT PROFIL ELEGANT & RESPONSIVE -->
     <div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -514,6 +502,7 @@
             </form>
         </div>
     </div>
+
     <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
             <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden text-center p-4">
@@ -555,6 +544,7 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
     document.addEventListener("DOMContentLoaded", function() {
         <?php if (session()->getFlashdata('success_profile')): ?>
         document.getElementById('successMessage').innerText =
