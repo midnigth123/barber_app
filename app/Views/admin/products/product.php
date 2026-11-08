@@ -50,7 +50,17 @@
                             <tr>
                                 <td class="px-3 fw-bold text-secondary"><?= $no++ ?></td>
                                 <td>
-                                    <span class="fw-bold text-dark"><?= $p['product_name'] ?></span>
+                                    <!-- Nama produk dapat diklik untuk membuka modal detail batch FEFO -->
+                                    <a href="javascript:void(0);"
+                                        class="fw-bold text-dark text-decoration-none d-inline-flex align-items-center"
+                                        data-id="<?= $p['id'] ?>" data-name="<?= esc($p['product_name']) ?>"
+                                        data-bs-toggle="modal" data-bs-target="#modalBatchDetail"
+                                        title="Klik untuk melihat detail batch FEFO">
+                                        <i class="bi bi-box-seam text-warning me-2"></i>
+                                        <span><?= esc($p['product_name']) ?></span>
+                                        <i class="bi bi-info-circle text-muted ms-2 small"
+                                            style="font-size: 0.85rem;"></i>
+                                    </a>
                                 </td>
                                 <td>
                                     <span class="fw-bold" style="color: #2b7a4b;">Rp
@@ -278,6 +288,43 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
+<!-- Modal Detail Batch FEFO -->
+<div class="modal fade" id="modalBatchDetail" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title fw-bold">
+                    <i class="bi bi-layers text-warning me-2"></i> Detail Batch & FEFO: <span id="productNameTitle"
+                        class="text-primary"></span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-3">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light text-secondary small">
+                            <tr>
+                                <th class="py-3">No. Batch</th>
+                                <th class="py-3 text-center">Stok Awal</th>
+                                <th class="py-3 text-center">Sisa Stok</th>
+                                <th class="py-3">Expired Date</th>
+                                <th class="py-3">Tanggal Masuk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="batchTableBody">
+                            <tr>
+                                <td colspan="5" class="text-center py-3 text-muted">Memuat data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer border-top-0 pt-0 pb-3">
+                <button type="button" class="btn btn-light border rounded-3 px-3" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ================= JAVASCRIPT MODAL INTERAKSI ================= -->
 <script>
@@ -314,6 +361,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 "<?= base_url('admin/products/delete/') ?>" + id;
         });
     });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const modalBatchDetail = document.getElementById('modalBatchDetail');
+    if (modalBatchDetail) {
+        modalBatchDetail.addEventListener('show.bs.modal', function(event) {
+            let button = event.relatedTarget;
+            let productId = button.getAttribute('data-id');
+            let productName = button.getAttribute('data-name');
+
+            document.getElementById('productNameTitle').innerText = productName;
+            let tableBody = document.getElementById('batchTableBody');
+            tableBody.innerHTML =
+                `<tr><td colspan="5" class="text-center py-3 text-muted">Memuat data batch...</td></tr>`;
+
+            fetch(`<?= base_url('admin/products/get-batches/') ?>/${productId}`)
+                .then(response => response.json())
+                .then(data => {
+                    tableBody.innerHTML = '';
+                    if (!data || data.length === 0) {
+                        tableBody.innerHTML =
+                            `<tr><td colspan="5" class="text-center py-3 text-muted">Belum ada data batch aktif untuk produk ini.</td></tr>`;
+                        return;
+                    }
+
+                    data.forEach((batch) => {
+                        let row = `
+                            <tr>
+                                <td><span class="badge bg-light text-dark border px-2 py-1 font-monospace">${batch.batch_number}</span></td>
+                                <td class="text-center">${batch.qty_initial} Unit</td>
+                                <td class="text-center"><span class="badge bg-success bg-opacity-10 text-success px-2 py-1">${batch.qty_remaining} Unit</span></td>
+                                <td><span class="text-danger fw-semibold"><i class="bi bi-calendar-event me-1"></i> ${batch.expired_date}</span></td>
+                                <td class="text-muted small">${batch.created_at}</td>
+                            </tr>
+                        `;
+                        tableBody.innerHTML += row;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    tableBody.innerHTML =
+                        `<tr><td colspan="5" class="text-center py-3 text-danger">Gagal memuat data batch.</td></tr>`;
+                });
+        });
+    }
 });
 </script>
 

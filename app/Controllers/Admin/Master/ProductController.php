@@ -85,4 +85,17 @@ class ProductController extends BaseController
 
         return redirect()->to('/admin/products')->with('success', 'Produk berhasil dihapus!');
     }
+    public function getBatches($productId)
+    {
+        $db = \Config\Database::connect();
+        
+        // Ambil semua batch aktif untuk produk ini berdasarkan urutan FEFO (expired terdekat di atas)
+        $batches = $db->table('product_batches')
+                    ->where('product_id', $productId)
+                    ->orderBy('expired_date', 'ASC')
+                    ->get()
+                    ->getResultArray();
+
+        return $this->response->setJSON($batches);
+    }
 }

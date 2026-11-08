@@ -24,12 +24,26 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('services/update/(:num)', 'Master\ServiceController::update/$1');
     $routes->get('services/delete/(:num)', 'Master\ServiceController::delete/$1');
 
+    $routes->get('services/categories', 'Master\ServiceCategoryController::index');
+    $routes->post('services/categories/create', 'Master\ServiceCategoryController::create');
+    $routes->get('services/categories/delete/(:num)', 'Master\ServiceCategoryController::delete/$1');
+    $routes->post('services/categories/update/(:num)', 'Master\ServiceCategoryController::update/$1');
+
+    $routes->get('services/commissions', 'Master\ServiceCommissionController::index');
+    $routes->post('services/commissions/update/(:num)', 'Master\ServiceCommissionController::update/$1');
+
     // Manajemen Produk (Masuk subfolder Master)
     $routes->get('products', 'Master\ProductController::index');
     $routes->post('products/create', 'Master\ProductController::create');
     $routes->post('products/update/(:num)', 'Master\ProductController::update/$1');
     $routes->get('products/delete/(:num)', 'Master\ProductController::delete/$1');
+    $routes->get('products/get-batches/(:num)', 'Master\ProductController::getBatches/$1');
 
+    // Manajemen Penerimaan Produk (Inventory)
+    $routes->get('products/receiving', 'Master\ProductPurchaseController::index');
+    $routes->post('products/receiving/store', 'Master\ProductPurchaseController::store');
+    $routes->get('products/receiving/confirm/(:num)', 'Master\ProductPurchaseController::confirm/$1');
+    
     // Manajemen POS & Struk (Masuk subfolder Transaksi)
     $routes->get('pos', 'Transaksi\PosController::index');
     $routes->post('pos/store', 'Transaksi\PosController::store');
@@ -52,9 +66,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
     // Logs, Roles, & Settings
     $routes->get('users/logs', 'User\LogController::index');          
-    $routes->get('users/roles', 'User\RoleController::index'); // Disesuaikan (menghapus double User\)
-    $routes->get('users/settings', 'User\SettingController::index'); 
-
     $routes->get('users/roles', 'User\RoleController::index'); 
-    $routes->post('users/roles/update/(:segment)', 'User\RoleController::updatePermission/$1'); // <-- Tambahkan baris ini
+    $routes->post('users/roles/update/(:segment)', 'User\RoleController::updatePermission/$1'); 
+    $routes->get('users/settings', 'User\SettingController::index'); 
 });
