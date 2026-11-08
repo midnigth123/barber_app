@@ -28,6 +28,7 @@ class ProfileController extends BaseController
             'username' => $username
         ]);
 
+        // $this->recordLog('Menambahkan layanan baru: ' . $this->request->getPost('name'));
         // Berikan flashdata sukses profil
         return redirect()->back()->with('success_profile', 'Profil berhasil diperbarui!');
     }
@@ -72,6 +73,8 @@ class ProfileController extends BaseController
             'password'   => $hashedPassword,
             'updated_at' => date('Y-m-d H:i:s')
         ]);
+
+        // $this->recordLog('Menambahkan layanan baru: ' . $this->request->getPost('name'));
 
         // Berikan flashdata sukses password
         return redirect()->back()->with('success_password', 'Kata sandi berhasil diperbarui dan dienkripsi!');

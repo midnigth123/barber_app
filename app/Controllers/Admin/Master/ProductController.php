@@ -4,6 +4,7 @@ namespace App\Controllers\Admin\Master;
 
 use App\Controllers\BaseController;
 use App\Models\ProductModel;
+use App\Models\ActivityLogModel;
 
 class ProductController extends BaseController
 {
@@ -22,13 +23,21 @@ class ProductController extends BaseController
     public function create()
     {
         $productModel = new ProductModel();
+        $logModel     = new ActivityLogModel();
+        $productName  = $this->request->getPost('product_name');
 
         $productModel->save([
-            'product_name'   => $this->request->getPost('product_name'),
-            'purchase_price' => 0,
-            'selling_price'  => $this->request->getPost('price'), // Ubah jika form mengirim name="selling_price" atau tetap biarkan 'price' jika input formnya name="price"
+            'product_name'   => $productName,
+            'selling_price'  => $this->request->getPost('price'), 
             'stock'          => $this->request->getPost('stock'),
             'is_active'      => 1
+        ]);
+
+        // Catat log aktivitas menggunakan $logModel
+        $logModel->save([
+            'user_id'    => session()->get('id') ?? null,
+            'activity'   => 'Menambahkan produk baru: ' . $productName,
+            'ip_address' => $this->request->getIPAddress()
         ]);
 
         return redirect()->to('/admin/products')->with('success', 'Produk berhasil ditambahkan!');
@@ -37,22 +46,42 @@ class ProductController extends BaseController
     public function update($id)
     {
         $productModel = new ProductModel();
+        $logModel     = new ActivityLogModel();
+        $productName  = $this->request->getPost('product_name');
 
         $productModel->update($id, [
-            'product_name'   => $this->request->getPost('product_name'),
-            'selling_price'  => $this->request->getPost('price'), // Pastikan ini menangkap input harga dengan benar
+            'product_name'   => $productName,
+            'selling_price'  => $this->request->getPost('price'), 
             'stock'          => $this->request->getPost('stock'),
+        ]);
+
+        // Catat log aktivitas update menggunakan $logModel
+        $logModel->save([
+            'user_id'    => session()->get('id') ?? null,
+            'activity'   => 'Memperbarui data produk: ' . $productName,
+            'ip_address' => $this->request->getIPAddress()
         ]);
 
         return redirect()->to('/admin/products')->with('success', 'Produk berhasil diperbarui!');
     }
 
-    // <-- METHOD UNTUK HAPUS PRODUK -->
     public function delete($id)
     {
         $productModel = new ProductModel();
+        $logModel     = new ActivityLogModel();
+        
+        // Ambil data produk dulu sebelum dihapus agar namanya tercatat di log
+        $product     = $productModel->find($id);
+        $productName = $product['product_name'] ?? 'ID #' . $id;
 
         $productModel->delete($id);
+
+        // Catat log aktivitas hapus menggunakan $logModel
+        $logModel->save([
+            'user_id'    => session()->get('id') ?? null,
+            'activity'   => 'Menghapus produk: ' . $productName,
+            'ip_address' => $this->request->getIPAddress()
+        ]);
 
         return redirect()->to('/admin/products')->with('success', 'Produk berhasil dihapus!');
     }

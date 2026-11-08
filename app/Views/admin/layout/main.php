@@ -284,27 +284,140 @@
 
             <!-- MASTER DATA -->
             <div class="sidebar-category">Master Data</div>
-            <li>
-                <a href="<?= base_url('admin/services') ?>"
-                    class="text-white text-decoration-none d-flex align-items-center gap-2 py-2 px-3">
-                    <i class="bi bi-grid-fill text-warning"></i> Kelola Layanan
+            <li class="nav-item">
+                <!-- Tombol Utama Dropdown Kelola Layanan -->
+                <a class="nav-link menu-toggle text-white fw-semibold d-flex align-items-center justify-content-between py-2 px-3 rounded-3 text-decoration-none"
+                    data-bs-toggle="collapse" href="#serviceSubMenu" role="button" aria-expanded="false"
+                    aria-controls="serviceSubMenu">
+                    <div class="d-flex align-items-center gap-2 text-nowrap">
+                        <i class="bi bi-scissors text-warning"></i>
+                        <span>Kelola Layanan</span>
+                    </div>
+                    <i class="bi bi-chevron-down text-warning small ms-auto"></i>
                 </a>
-            </li>
-            <li>
-                <a href="<?= base_url('admin/products') ?>"
-                    class="text-white text-decoration-none d-flex align-items-center gap-2 py-2 px-3">
-                    <i class="bi bi-box-seam text-warning"></i> Kelola Produk
-                </a>
-            </li>
 
+                <!-- Sub-Menu Vertikal -->
+                <div class="collapse sidebar-submenu" id="serviceSubMenu">
+                    <ul class="nav flex-column list-unstyled mb-0">
+                        <li>
+                            <a href="<?= base_url('admin/services') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-grid-fill text-warning"></i> Manajemen Layanan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/services/categories') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-tags-fill text-warning"></i> Kategori Layanan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/services/commissions') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-percent text-warning"></i> Pengaturan Komisi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <!-- Tombol Utama Dropdown Kelola Produk -->
+                <a class="nav-link menu-toggle text-white fw-semibold d-flex align-items-center justify-content-between py-2 px-3 rounded-3 text-decoration-none"
+                    data-bs-toggle="collapse" href="#productSubMenu" role="button" aria-expanded="false"
+                    aria-controls="productSubMenu">
+                    <div class="d-flex align-items-center gap-2 text-nowrap">
+                        <i class="bi bi-box-seam text-warning"></i>
+                        <span>Kelola Produk</span>
+                    </div>
+                    <i class="bi bi-chevron-down text-warning small ms-auto"></i>
+                </a>
+
+                <!-- Sub-Menu Vertikal dengan Ikon Masing-Masing -->
+                <div class="collapse sidebar-submenu" id="productSubMenu">
+                    <ul class="nav flex-column list-unstyled mb-0">
+                        <li>
+                            <a href="<?= base_url('admin/products') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-grid-fill text-warning"></i> Manajemen Produk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/products/receiving') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-box-arrow-in-down text-warning"></i> Penerimaan Produk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/products/stock-opname') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-clipboard-check-fill text-warning"></i> Stok Opname
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/products/expenses') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-wallet2 text-warning"></i> Pengeluaran
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/products/waste') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-trash3-fill text-warning"></i> Waste
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
             <!-- TRANSAKSI & LAPORAN -->
             <div class="sidebar-category">Transaksi & Laporan</div>
-            <li>
-                <a href="<?= base_url('admin/reports/transactions') ?>"
-                    class="text-white text-decoration-none d-flex align-items-center gap-2 py-2 px-3">
-                    <i class="bi bi-journal-text text-warning"></i>
-                    <span>Laporan Transaksi</span>
+
+            <li class="nav-item">
+                <!-- Tombol Utama Dropdown Laporan -->
+                <a class="nav-link menu-toggle text-white fw-semibold d-flex align-items-center justify-content-between py-2 px-3 rounded-3 text-decoration-none"
+                    data-bs-toggle="collapse" href="#reportSubMenu" role="button" aria-expanded="false"
+                    aria-controls="reportSubMenu">
+                    <div class="d-flex align-items-center gap-2 text-nowrap">
+                        <i class="bi bi-journal-text text-warning"></i>
+                        <span>Laporan & Analitik</span>
+                    </div>
+                    <i class="bi bi-chevron-down text-warning small ms-auto"></i>
                 </a>
+
+                <!-- Sub-Menu Vertikal dengan Ikon Masing-Masing -->
+                <div class="collapse sidebar-submenu" id="reportSubMenu">
+                    <ul class="nav flex-column list-unstyled mb-0">
+                        <li>
+                            <a href="<?= base_url('admin/reports/transactions') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-receipt-cutoff text-warning"></i> Laporan Transaksi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/reports/waste') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-trash3 text-warning"></i> Laporan Waste
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/reports/expenses') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-wallet2 text-warning"></i> Laporan Pengeluaran
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/reports/stock-opname') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-clipboard-check text-warning"></i> Laporan Stok Opname
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url('admin/reports/profit-loss') ?>"
+                                class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-graph-up-arrow text-warning"></i> Laba Rugi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <!-- PENGATURAN / MANAJEMEN PENGGUNA -->

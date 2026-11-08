@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\ProductModel;
 use App\Models\TransactionModel;
 use App\Models\TransactionDetailModel;
+use App\Models\ActivityLogModel; // <-- 1. Import model log
 
 class PosController extends BaseController
 {
@@ -28,7 +29,8 @@ class PosController extends BaseController
     public function store()
     {
         $transactionModel = new TransactionModel();
-        $detailModel = new TransactionDetailModel();
+        $detailModel      = new TransactionDetailModel();
+        $logModel         = new ActivityLogModel(); // <-- 2. Inisialisasi model log
 
         // Ambil data dari form POS
         $customerName  = $this->request->getPost('customer_name') ?? 'Umum';
@@ -67,11 +69,11 @@ class PosController extends BaseController
             $commissionEarned = 0;
             if (isset($item['item_type']) && $item['item_type'] === 'service') {
                 $commissionRate = 0.30; 
-                $commissionEarned = $subtotal * $commissionRate; 
+                $commissionEarned = $subtotal * $commissionRate; // Diperbaiki (menambahkan tanda *)
             }
 
             // Hitung pendapatan bersih toko untuk item ini (Subtotal - Komisi Kapster)
-            $shopRevenue = $subtotal - $commissionEarned; 
+            $shopRevenue = $subtotal - $commissionEarned; // Diperbaiki (menambahkan tanda -)
 
             $detailModel->insert([
                 'transaction_id'    => $transactionId,
@@ -95,16 +97,22 @@ class PosController extends BaseController
             }
         }
 
-        // 3. DIUBAH: Redirect langsung ke halaman cetak struk membawa ID transaksi
+        // --- 3. CATAT LOG AKTIVITAS TRANSAKSI KASIR ---
+        $logModel->save([
+            'user_id'    => session()->get('id') ?? null,
+            'activity'   => 'Melakukan transaksi POS baru [Invoice: ' . $invoiceCode . '] - Pelanggan: ' . $customerName . ' (Total: Rp ' . number_format($totalAmount, 0, ',', '.') . ')',
+            'ip_address' => $this->request->getIPAddress()
+        ]);
+
+        // 4. Redirect langsung ke halaman cetak struk membawa ID transaksi
         return redirect()->to(base_url('admin/pos/receipt/' . $transactionId))
                          ->with('success', 'Transaksi berhasil disimpan!');
     }
 
-    // TAMBAHKAN FUNGSI INI UNTUK MENAMPILKAN HALAMAN STRUK
     public function receipt($id)
     {
         $transactionModel = new TransactionModel();
-        $detailModel = new TransactionDetailModel();
+        $detailModel      = new TransactionDetailModel();
 
         // Ambil data transaksi utama beserta detail itemnya
         $transaction = $transactionModel->find($id);
