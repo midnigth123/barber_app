@@ -45,10 +45,12 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('products/receiving/confirm/(:num)', 'Master\ProductPurchaseController::confirm/$1');
 
 
-    // Route untuk Stok Opname Produk & Batch
-    $routes->get('products/stock-opname', 'Master\StockOpname::index');                  // List Riwayat
-    $routes->get('products/stock-opname/create', 'Master\StockOpname::create');           // Form Input Opname Baru
-    $routes->post('products/stock-opname/store', 'Master\StockOpname::store');
+    // Route Manajemen Stok Opname
+    $routes->get('products/stock-opname', 'Master\StockOpname::index');                  
+    $routes->get('products/stock-opname/start', 'Master\StockOpname::start');             
+    $routes->get('products/stock-opname/process/(:num)', 'Master\StockOpname::process/$1'); 
+    $routes->post('products/stock-opname/store/(:num)', 'Master\StockOpname::store/$1'); // <-- Perhatikan bagian ini!
+    $routes->get('products/stock-opname/detail/(:num)', 'Master\StockOpname::detail/$1');
 
     // Manajemen POS & Struk (Masuk subfolder Transaksi)
     $routes->get('pos', 'Transaksi\PosController::index');

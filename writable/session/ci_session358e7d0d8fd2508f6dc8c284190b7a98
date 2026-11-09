@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1794238384;_ci_previous_url|s:82:"http://localhost/barber_app/public/index.php/admin/products/stock-opname/process/1";id|s:1:"1";name|s:20:"Dyan Mardinata Putra";username|s:4:"dyan";role|s:6:"barber";logged_in|b:1;error|s:60:"MySQL Raw Error: Unknown column 'updated_at' in 'field list'";__ci_vars|a:1:{s:5:"error";s:3:"old";}
