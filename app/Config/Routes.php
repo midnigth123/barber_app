@@ -43,7 +43,13 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('products/receiving', 'Master\ProductPurchaseController::index');
     $routes->post('products/receiving/store', 'Master\ProductPurchaseController::store');
     $routes->get('products/receiving/confirm/(:num)', 'Master\ProductPurchaseController::confirm/$1');
-    
+
+
+    // Route untuk Stok Opname Produk & Batch
+    $routes->get('products/stock-opname', 'Master\StockOpname::index');                  // List Riwayat
+    $routes->get('products/stock-opname/create', 'Master\StockOpname::create');           // Form Input Opname Baru
+    $routes->post('products/stock-opname/store', 'Master\StockOpname::store');
+
     // Manajemen POS & Struk (Masuk subfolder Transaksi)
     $routes->get('pos', 'Transaksi\PosController::index');
     $routes->post('pos/store', 'Transaksi\PosController::store');
@@ -59,14 +65,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->post('reports/cancel-transaction/(:num)', 'Transaksi\ReportController::cancel/$1');
 
     // Manajemen Pengguna & Logs
-    $routes->get('users', 'User\UserController::index');            
-    $routes->post('users/store', 'User\UserController::store');      
-    $routes->post('users/update/(:num)', 'User\UserController::update/$1'); 
-    $routes->get('users/delete/(:num)', 'User\UserController::delete/$1'); 
+    $routes->get('users', 'User\UserController::index');
+    $routes->post('users/store', 'User\UserController::store');
+    $routes->post('users/update/(:num)', 'User\UserController::update/$1');
+    $routes->get('users/delete/(:num)', 'User\UserController::delete/$1');
 
     // Logs, Roles, & Settings
-    $routes->get('users/logs', 'User\LogController::index');          
-    $routes->get('users/roles', 'User\RoleController::index'); 
-    $routes->post('users/roles/update/(:segment)', 'User\RoleController::updatePermission/$1'); 
-    $routes->get('users/settings', 'User\SettingController::index'); 
+    $routes->get('users/logs', 'User\LogController::index');
+    $routes->get('users/roles', 'User\RoleController::index');
+    $routes->post('users/roles/update/(:segment)', 'User\RoleController::updatePermission/$1');
+    $routes->get('users/settings', 'User\SettingController::index');
 });

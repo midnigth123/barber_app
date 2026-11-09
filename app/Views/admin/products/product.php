@@ -212,13 +212,21 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-semibold small text-secondary">Harga Jual (Rp)</label>
-                        <input type="number" name="price" id="edit_price" class="form-control rounded-3 py-2 bg-white"
-                            required>
+                        <input type="number" name="price" id="edit_price" class="form-control rounded-3 py-2 bg-light text-muted"
+                            value="0" readonly disabled
+                            title="Harga jual dikelola melalui sistem terpusat">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">
+                            <i class="bi bi-info-circle me-1"></i> Harga jual dikelola secara otomatis/terpusat.
+                        </div>
                     </div>
                     <div class="mb-1">
                         <label class="form-label fw-semibold small text-secondary">Jumlah Stok</label>
-                        <input type="number" name="stock" id="edit_stock" class="form-control rounded-3 py-2 bg-white"
-                            required>
+                        <input type="number" name="stock" id="edit_stock" class="form-control rounded-3 py-2 bg-light text-muted"
+                            value="0" readonly disabled
+                            title="Stok dikelola otomatis melalui menu Penerimaan Produk">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">
+                            <i class="bi bi-info-circle me-1"></i> Stok tidak dapat diubah manual, dikelola otomatis melalui menu Penerimaan Produk.
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer bg-white px-4 py-3 border-0">

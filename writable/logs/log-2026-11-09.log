@@ -344,3 +344,178 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
 13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
 14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:46:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\barber_app\\public\\index.php')
+CRITICAL - 2026-11-09 10:46:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\barber_app\\public\\index.php')
+CRITICAL - 2026-11-09 10:46:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\barber_app\\public\\index.php')
+DEBUG - 2026-11-09 10:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:47:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:47:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/app.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/app.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/app', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:47:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/app.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/app.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/app', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname', [], true)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(34): view('admin/products/stock_opname', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:51:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname_index.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname_index.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname_index', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(27): view('admin/products/stock_opname_index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 10:53:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname_index.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname_index.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname_index', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(26): view('admin/products/stock_opname_index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:53:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname_index.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname_index.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname_index', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(26): view('admin/products/stock_opname_index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 10:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:56:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname_index.php"
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname_index.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname_index', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(26): view('admin/products/stock_opname_index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-09 10:57:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/products/stock_opname_create.php"
+[Method: GET, Route: admin/products/stock-opname/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/products/stock_opname_create.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/stock_opname_create', [], true)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(52): view('admin/products/stock_opname_create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->create()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 10:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 11:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 12:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 15:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
