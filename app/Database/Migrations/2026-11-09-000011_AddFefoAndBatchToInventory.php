@@ -88,14 +88,17 @@ class AddFefoAndBatchToInventory extends Migration
 
         $this->forge->dropTable('product_batches', true);
         
-        if ($db->fieldExists('batch_number', 'product_purchases')) {
-            $this->forge->dropColumn('product_purchases', 'batch_number');
-        }
-        if ($db->fieldExists('expired_date', 'product_purchases')) {
-            $this->forge->dropColumn('product_purchases', 'expired_date');
-        }
-        if ($db->fieldExists('status', 'product_purchases')) {
-            $this->forge->dropColumn('product_purchases', 'status');
+        // Bungkus dengan pengaman tableExists agar aman saat rollback
+        if ($db->tableExists('product_purchases')) {
+            if ($db->fieldExists('batch_number', 'product_purchases')) {
+                $this->forge->dropColumn('product_purchases', 'batch_number');
+            }
+            if ($db->fieldExists('expired_date', 'product_purchases')) {
+                $this->forge->dropColumn('product_purchases', 'expired_date');
+            }
+            if ($db->fieldExists('status', 'product_purchases')) {
+                $this->forge->dropColumn('product_purchases', 'status');
+            }
         }
     }
 }

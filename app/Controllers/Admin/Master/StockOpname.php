@@ -15,7 +15,7 @@ class StockOpname extends BaseController
         $builder = $db->table('product_batches pb');
         $builder->select('pb.*, p.product_name');
         $builder->join('products p', 'p.id = pb.product_id');
-        $builder->orderBy('pb.updated_at', 'DESC');
+        $builder->orderBy('pb.id', 'DESC');
         $history = $builder->get()->getResultArray();
 
         $data = [

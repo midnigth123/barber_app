@@ -519,6 +519,7 @@ DEBUG - 2026-11-09 11:11:25 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-11-09 11:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 12:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 15:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< Updated upstream
 DEBUG - 2026-11-09 20:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 20:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 20:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -529,3 +530,781 @@ DEBUG - 2026-11-09 20:41:38 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-11-09 20:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 20:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-11-09 20:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2026-11-09 20:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:22:06 --> Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:06 --> [Caused by] mysqli_sql_exception: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:22:27 --> Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:22:27 --> [Caused by] mysqli_sql_exception: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-09 20:24:44 --> Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:24:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:24:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:24:44 --> [Caused by] mysqli_sql_exception: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:26:25 --> Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:26:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:26:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:26:25 --> [Caused by] mysqli_sql_exception: Unknown column 'pb.updated_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `pb`.*, `p`.`product_name`
+FROM `product_batches` `pb`
+JOIN `products` `p` ON `p`.`id` = `pb`.`product_id`
+ORDER BY `pb`.`updated_at` DESC', [], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(19): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:33:19 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:33:26 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:33:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:34:55 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:34:55\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:34:55\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:34:55\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:38:11 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:38:11\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:38:11\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:38:11\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:38:44 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:38:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:38:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:38:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:39:01 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:39:01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:39:01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:39:01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:41:09 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:41:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:41:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:41:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(105): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:42:06 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:42:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:42:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:42:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:44:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:44:13 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:44:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:44:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:44:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:45:30 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:45:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:45:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:45:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:46:02 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:46:38 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:46:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(99): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:47:10 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'batch_number' in 'field list'
+[Method: GET, Route: admin/products/receiving/confirm/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:10 --> [Caused by] mysqli_sql_exception: Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-F9DB\', 170, 170, \'2030-11-11\', \'2026-11-09 20:47:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:47:26 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'batch_number' in 'field list'
+[Method: GET, Route: admin/products/receiving/confirm/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-09 20:47:26 --> [Caused by] mysqli_sql_exception: Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-C0AE\', 150, 150, \'2030-11-09\', \'2026-11-09 20:47:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('1')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:48:59 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:48:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:48:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:48:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(98): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('3')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:49:25 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(97): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('3')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 20:49:51 --> Unknown column 'batch_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (\'1\', \'BAT-1-202611-AC32\', 10, 10, \'2030-11-09\', \'2026-11-09 20:49:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2362): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product_batches` (`product_id`, `batch_number`, `qty_initial`, `qty_remaining`, `expired_date`, `created_at`) VALUES (:product_id:, :batch_number:, :qty_initial:, :qty_remaining:, :expired_date:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\ProductPurchaseController.php(97): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\ProductPurchaseController->confirm('3')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\ProductPurchaseController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-09 20:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-09 20:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> Stashed changes
+DEBUG - 2026-11-09 22:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-09 22:02:23 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseConnection.php(1813): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Database\BaseConnection.php(1841): CodeIgniter\Database\BaseConnection->getFieldNames()
+ 6 APPPATH\Database\Migrations\2026-11-09-000011_AddFefoAndBatchToInventory.php(91): CodeIgniter\Database\BaseConnection->fieldExists()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->down()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate()
+ 9 SYSTEMPATH\Commands\Database\MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+10 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+11 SYSTEMPATH\Commands\Database\MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+12 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+13 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+14 SYSTEMPATH\Commands\Database\MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+15 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+16 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+17 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+18 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+19 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+20 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+21 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-09 22:03:08 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(806): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-09-000011_AddFefoAndBatchToInventory.php(92): CodeIgniter\Database\Forge->dropColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->down()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+10 SYSTEMPATH\Commands\Database\MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+14 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+17 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-09 22:03:51 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(806): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-09-000011_AddFefoAndBatchToInventory.php(92): CodeIgniter\Database\Forge->dropColumn()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->down()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRollback::{closure:CodeIgniter\Commands\Database\MigrateRollback::run():104}()
+10 SYSTEMPATH\Commands\Database\MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRollback->run()
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+14 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\MigrateRefresh->{closure:CodeIgniter\Commands\Database\MigrateRefresh::run():89}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+16 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\MigrateRefresh->run()
+17 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+18 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()

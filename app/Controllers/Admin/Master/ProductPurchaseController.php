@@ -67,67 +67,71 @@ class ProductPurchaseController extends BaseController
     }
 
     public function confirm($id)
-    {
-        $db = \Config\Database::connect();
-        $logModel = new ActivityLogModel();
+{
+    $db = \Config\Database::connect();
+    $logModel = new \App\Models\ActivityLogModel();
 
-        // Ambil data pembelian berdasarkan ID
-        $purchase = $db->table('product_purchases')->where('id', $id)->get()->getRowArray();
+    $purchase = $db->table('product_purchases')->where('id', $id)->get()->getRowArray();
 
-        if (!$purchase) {
-            return redirect()->to('/admin/products/receiving')->with('error', 'Data penerimaan tidak ditemukan.');
-        }
+    if (!$purchase) {
+        return redirect()->to('/admin/products/receiving')->with('error', 'Data penerimaan tidak ditemukan.');
+    }
 
-        // Cek apakah sudah dikonfirmasi sebelumnya
-        if ($purchase['status'] === 'confirmed') {
-            return redirect()->to('/admin/products/receiving')->with('error', 'Penerimaan ini sudah dikonfirmasi sebelumnya.');
-        }
+    if ($purchase['status'] === 'confirmed') {
+        return redirect()->to('/admin/products/receiving')->with('error', 'Penerimaan ini sudah dikonfirmasi sebelumnya.');
+    }
 
-        $productId   = $purchase['product_id'];
-        $qtyReceived = (int) $purchase['qty_received'];
-        $batchNumber = $purchase['batch_number'];
-        $expiredDate = $purchase['expired_date'];
+    $productId   = $purchase['product_id'];
+    $qtyReceived = (int) $purchase['qty_received'];
+    $batchNumber = $purchase['batch_number'];
+    $expiredDate = $purchase['expired_date'];
 
-        $db->transStart();
+    $db->transStart();
 
-        // 1. Update status pembelian menjadi 'confirmed'
-        $db->table('product_purchases')->where('id', $id)->update([
-            'status' => 'confirmed'
+    // 1. Update status pembelian
+    $db->table('product_purchases')->where('id', $id)->update([
+        'status' => 'confirmed'
+    ]);
+
+    // 2. Insert ke product_batches
+    $db->table('product_batches')->insert([
+        'product_id'    => $productId,
+        'batch_number'  => $batchNumber,
+        'qty_initial'   => $qtyReceived,
+        'qty_remaining' => $qtyReceived,
+        'expired_date'  => $expiredDate,
+        'created_at'    => date('Y-m-d H:i:s')
+    ]);
+
+    // 3. Update stok produk
+    $product = $db->table('products')->where('id', $productId)->get()->getRowArray();
+    if ($product) {
+        $newStock = $product['stock'] + $qtyReceived;
+        $db->table('products')->where('id', $productId)->update([
+            'stock'      => $newStock,
+            'updated_at' => date('Y-m-d H:i:s')
         ]);
+    }
 
-        // 2. Masukkan ke tabel product_batches agar terbaca oleh sistem FEFO di kasir
-        $db->table('product_batches')->insert([
-            'product_id'    => $productId,
-            'batch_number'  => $batchNumber,
-            'qty_initial'   => $qtyReceived,
-            'qty_remaining' => $qtyReceived,
-            'expired_date'  => $expiredDate,
-            'created_at'    => date('Y-m-d H:i:s')
-        ]);
-
-        // 3. Otomatis tambahkan stok utama ke tabel products
-        $product = $db->table('products')->where('id', $productId)->get()->getRowArray();
-        if ($product) {
-            $newStock = $product['stock'] + $qtyReceived;
-            $db->table('products')->where('id', $productId)->update([
-                'stock'      => $newStock,
-                'updated_at' => date('Y-m-d H:i:s')
+    // 4. Log aktivitas (DIBUNGKUS TRY-CATCH AGAR TIDAK MEMBATALKAN TRANSAKSI UTAMA JIKA GAGAL)
+    try {
+        if (class_exists('\\App\\Models\\ActivityLogModel')) {
+            $logModel->save([
+                'user_id'    => session()->get('id') ?? null,
+                'activity'   => 'Konfirmasi restock & buat Batch FEFO untuk produk ID #' . $productId,
+                'ip_address' => $this->request->getIPAddress()
             ]);
         }
-
-        // 4. Catat log aktivitas
-        $logModel->save([
-            'user_id'    => session()->get('id') ?? null,
-            'activity'   => 'Konfirmasi restock & buat Batch FEFO untuk produk: ' . ($product['product_name'] ?? 'ID #' . $productId) . ' sebanyak ' . $qtyReceived . ' unit',
-            'ip_address' => $this->request->getIPAddress()
-        ]);
-
-        $db->transComplete();
-
-        if ($db->transStatus() === FALSE) {
-            return redirect()->to('/admin/products/receiving')->with('error', 'Gagal mengkonfirmasi penerimaan.');
-        }
-
-        return redirect()->to('/admin/products/receiving')->with('success', 'Penerimaan dikonfirmasi! Batch FEFO aktif dan stok bertambah.');
+    } catch (\Exception $ex) {
+        // Abaikan error log jika tabel log bermasalah, agar transaksi utama tetap sukses
     }
+
+    $db->transComplete();
+
+    if ($db->transStatus() === FALSE) {
+        return redirect()->to('/admin/products/receiving')->with('error', 'Gagal mengkonfirmasi penerimaan.');
+    }
+
+    return redirect()->to('/admin/products/receiving')->with('success', 'Penerimaan dikonfirmasi! Batch FEFO aktif dan stok bertambah.');
+}
 }

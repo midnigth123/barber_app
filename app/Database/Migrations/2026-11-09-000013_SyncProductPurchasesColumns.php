@@ -36,6 +36,16 @@ class SyncProductPurchasesColumns extends Migration
 
     public function down()
     {
-        //
+        $db = \Config\Database::connect();
+
+        // Beri pengaman agar tidak error jika tabel belum/sudah dihapus
+        if ($db->tableExists('product_purchases')) {
+            if ($db->fieldExists('batch_number', 'product_purchases')) {
+                $this->forge->dropColumn('product_purchases', 'batch_number');
+            }
+            if ($db->fieldExists('updated_at', 'product_purchases')) {
+                $this->forge->dropColumn('product_purchases', 'updated_at');
+            }
+        }
     }
 }
