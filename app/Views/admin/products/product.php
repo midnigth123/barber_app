@@ -38,80 +38,80 @@
                         </thead>
                         <tbody>
                             <?php if (empty($products)): ?>
-                            <tr>
-                                <td colspan="6" class="text-center py-5 text-muted">
-                                    <i class="bi bi-box-seam fs-2 d-block mb-2 text-secondary opacity-50"></i>
-                                    Belum ada data produk tersedia.
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td colspan="6" class="text-center py-5 text-muted">
+                                        <i class="bi bi-box-seam fs-2 d-block mb-2 text-secondary opacity-50"></i>
+                                        Belum ada data produk tersedia.
+                                    </td>
+                                </tr>
                             <?php else: ?>
-                            <?php $no = 1;
+                                <?php $no = 1;
                                 foreach ($products as $p): ?>
-                            <tr>
-                                <td class="px-3 fw-bold text-secondary"><?= $no++ ?></td>
-                                <td>
-                                    <!-- Nama produk dapat diklik untuk membuka modal detail batch FEFO -->
-                                    <a href="javascript:void(0);"
-                                        class="fw-bold text-dark text-decoration-none d-inline-flex align-items-center"
-                                        data-id="<?= $p['id'] ?>" data-name="<?= esc($p['product_name']) ?>"
-                                        data-bs-toggle="modal" data-bs-target="#modalBatchDetail"
-                                        title="Klik untuk melihat detail batch FEFO">
-                                        <i class="bi bi-box-seam text-warning me-2"></i>
-                                        <span><?= esc($p['product_name']) ?></span>
-                                        <i class="bi bi-info-circle text-muted ms-2 small"
-                                            style="font-size: 0.85rem;"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <span class="fw-bold" style="color: #2b7a4b;">Rp
-                                        <?= number_format($p['selling_price'], 0, ',', '.') ?></span>
-                                </td>
-                                <td>
-                                    <span class="fw-semibold text-dark"><?= $p['stock'] ?> Pcs</span>
-                                </td>
-                                <td>
-                                    <span
-                                        class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-semibold"
-                                        style="font-size: 11px;">
-                                        <i class="bi bi-dot"></i> Tersedia
-                                    </span>
-                                </td>
-                                <td class="text-end">
-                                    <div class="d-flex justify-content-end gap-1">
-                                        <!-- Tombol Detail -->
-                                        <button
-                                            class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-info d-flex align-items-center gap-1 btn-detail"
-                                            data-bs-toggle="modal" data-bs-target="#detailProductModal"
-                                            data-name="<?= $p['product_name'] ?>"
-                                            data-price="Rp <?= number_format($p['selling_price'], 0, ',', '.') ?>"
-                                            data-stock="<?= $p['stock'] ?> Pcs" title="Detail Produk"
-                                            style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
-                                            <i class="bi bi-eye"></i>
-                                        </button>
+                                    <tr>
+                                        <td class="px-3 fw-bold text-secondary"><?= $no++ ?></td>
+                                        <td>
+                                            <!-- Nama produk dapat diklik untuk membuka modal detail batch FEFO -->
+                                            <a href="javascript:void(0);"
+                                                class="fw-bold text-dark text-decoration-none d-inline-flex align-items-center"
+                                                data-id="<?= $p['id'] ?>" data-name="<?= esc($p['product_name']) ?>"
+                                                data-bs-toggle="modal" data-bs-target="#modalBatchDetail"
+                                                title="Klik untuk melihat detail batch FEFO">
+                                                <i class="bi bi-box-seam text-warning me-2"></i>
+                                                <span><?= esc($p['product_name']) ?></span>
+                                                <i class="bi bi-info-circle text-muted ms-2 small"
+                                                    style="font-size: 0.85rem;"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="fw-bold" style="color: #2b7a4b;">Rp
+                                                <?= number_format($p['selling_price'], 0, ',', '.') ?></span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-semibold text-dark"><?= $p['stock'] ?> Pcs</span>
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-semibold"
+                                                style="font-size: 11px;">
+                                                <i class="bi bi-dot"></i> Tersedia
+                                            </span>
+                                        </td>
+                                        <td class="text-end">
+                                            <div class="d-flex justify-content-end gap-1">
+                                                <!-- Tombol Detail -->
+                                                <button
+                                                    class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-info d-flex align-items-center gap-1 btn-detail"
+                                                    data-bs-toggle="modal" data-bs-target="#detailProductModal"
+                                                    data-name="<?= $p['product_name'] ?>"
+                                                    data-price="Rp <?= number_format($p['selling_price'], 0, ',', '.') ?>"
+                                                    data-stock="<?= $p['stock'] ?> Pcs" title="Detail Produk"
+                                                    style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
 
-                                        <!-- Tombol Edit -->
-                                        <button
-                                            class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-primary d-flex align-items-center gap-1 btn-edit"
-                                            data-bs-toggle="modal" data-bs-target="#editProductModal"
-                                            data-id="<?= $p['id'] ?>" data-name="<?= $p['product_name'] ?>"
-                                            data-price="<?= $p['selling_price'] ?>" data-stock="<?= $p['stock'] ?>"
-                                            title="Edit Produk"
-                                            style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
+                                                <!-- Tombol Edit -->
+                                                <button
+                                                    class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-primary d-flex align-items-center gap-1 btn-edit"
+                                                    data-bs-toggle="modal" data-bs-target="#editProductModal"
+                                                    data-id="<?= $p['id'] ?>" data-name="<?= $p['product_name'] ?>"
+                                                    data-price="<?= $p['selling_price'] ?>" data-stock="<?= $p['stock'] ?>"
+                                                    title="Edit Produk"
+                                                    style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
 
-                                        <!-- Tombol Hapus -->
-                                        <button
-                                            class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-danger d-flex align-items-center gap-1 btn-delete"
-                                            data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"
-                                            data-id="<?= $p['id'] ?>" title="Hapus Produk"
-                                            style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
-                                            <i class="bi bi-trash3"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
+                                                <!-- Tombol Hapus -->
+                                                <button
+                                                    class="btn btn-sm btn-light border shadow-sm rounded-3 px-2 py-1 text-danger d-flex align-items-center gap-1 btn-delete"
+                                                    data-bs-toggle="modal" data-bs-target="#deleteConfirmModal"
+                                                    data-id="<?= $p['id'] ?>" title="Hapus Produk"
+                                                    style="font-size: 12px; font-weight: 600; background: #fdfdfd;">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             <?php endif; ?>
                         </tbody>
                     </table>
@@ -124,28 +124,28 @@
 
 <!-- ================= MODAL ALERT SUKSES OTOMATIS ================= -->
 <?php if (session()->getFlashdata('success')): ?>
-<div class="modal fade" id="successAlertModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-        <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4" style="background: #ffffff;">
-            <div class="mb-3 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm"
-                style="width: 65px; height: 65px; background: rgba(212, 175, 55, 0.15); color: #b8860b; font-size: 32px;">
-                <i class="bi bi-check-circle-fill"></i>
+    <div class="modal fade" id="successAlertModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4" style="background: #ffffff;">
+                <div class="mb-3 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                    style="width: 65px; height: 65px; background: rgba(212, 175, 55, 0.15); color: #b8860b; font-size: 32px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-2">Berhasil!</h5>
+                <p class="text-muted small mb-0"><?= session()->getFlashdata('success') ?></p>
             </div>
-            <h5 class="fw-bold text-dark mb-2">Berhasil!</h5>
-            <p class="text-muted small mb-0"><?= session()->getFlashdata('success') ?></p>
         </div>
     </div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var successModalEl = document.getElementById('successAlertModal');
-    var successModal = new bootstrap.Modal(successModalEl);
-    successModal.show();
-    setTimeout(function() {
-        successModal.hide();
-    }, 4000);
-});
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var successModalEl = document.getElementById('successAlertModal');
+            var successModal = new bootstrap.Modal(successModalEl);
+            successModal.show();
+            setTimeout(function() {
+                successModal.hide();
+            }, 4000);
+        });
+    </script>
 <?php endif; ?>
 
 <!-- ================= 1. MODAL TAMBAH PRODUK ================= -->
@@ -172,9 +172,13 @@ document.addEventListener('DOMContentLoaded', function() {
                             placeholder="Contoh: 95000">
                     </div>
                     <div class="mb-1">
-                        <label class="form-label fw-semibold small text-secondary">Jumlah Stok</label>
-                        <input type="number" name="stock" class="form-control rounded-3 py-2 bg-white" required
-                            placeholder="Contoh: 25">
+                        <label class="form-label fw-semibold small text-secondary">Jumlah Stok Awal</label>
+                        <input type="number" name="stock" class="form-control rounded-3 py-2 bg-light text-muted"
+                            value="0" readonly disabled
+                            title="Stok dihitung otomatis dari menu Penerimaan Produk (Restock)">
+                        <div class="form-text text-muted" style="font-size: 0.75rem;">
+                            <i class="bi bi-info-circle me-1"></i> Stok dikelola otomatis melalui menu Penerimaan Produk.
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer bg-white px-4 py-3 border-0">
@@ -328,65 +332,65 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- ================= JAVASCRIPT MODAL INTERAKSI ================= -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Edit
-    const editButtons = document.querySelectorAll('.btn-edit');
-    editButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const id = this.getAttribute('data-id');
-            document.getElementById('edit_product_name').value = this.getAttribute('data-name');
-            document.getElementById('edit_price').value = this.getAttribute('data-price');
-            document.getElementById('edit_stock').value = this.getAttribute('data-stock');
-            document.getElementById('formEditProduct').action =
-                "<?= base_url('admin/products/update/') ?>" + id;
+    document.addEventListener('DOMContentLoaded', function() {
+        // Edit
+        const editButtons = document.querySelectorAll('.btn-edit');
+        editButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                document.getElementById('edit_product_name').value = this.getAttribute('data-name');
+                document.getElementById('edit_price').value = this.getAttribute('data-price');
+                document.getElementById('edit_stock').value = this.getAttribute('data-stock');
+                document.getElementById('formEditProduct').action =
+                    "<?= base_url('admin/products/update/') ?>" + id;
+            });
+        });
+
+        // Detail
+        const detailButtons = document.querySelectorAll('.btn-detail');
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('detail-name').innerText = this.getAttribute('data-name');
+                document.getElementById('detail-price').innerText = this.getAttribute('data-price');
+                document.getElementById('detail-stock').innerText = this.getAttribute('data-stock');
+            });
+        });
+
+        // Hapus
+        const deleteButtons = document.querySelectorAll('.btn-delete');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                document.getElementById('confirmDeleteBtn').href =
+                    "<?= base_url('admin/products/delete/') ?>" + id;
+            });
         });
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        const modalBatchDetail = document.getElementById('modalBatchDetail');
+        if (modalBatchDetail) {
+            modalBatchDetail.addEventListener('show.bs.modal', function(event) {
+                let button = event.relatedTarget;
+                let productId = button.getAttribute('data-id');
+                let productName = button.getAttribute('data-name');
 
-    // Detail
-    const detailButtons = document.querySelectorAll('.btn-detail');
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            document.getElementById('detail-name').innerText = this.getAttribute('data-name');
-            document.getElementById('detail-price').innerText = this.getAttribute('data-price');
-            document.getElementById('detail-stock').innerText = this.getAttribute('data-stock');
-        });
-    });
+                document.getElementById('productNameTitle').innerText = productName;
+                let tableBody = document.getElementById('batchTableBody');
+                tableBody.innerHTML =
+                    `<tr><td colspan="5" class="text-center py-3 text-muted">Memuat data batch...</td></tr>`;
 
-    // Hapus
-    const deleteButtons = document.querySelectorAll('.btn-delete');
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const id = this.getAttribute('data-id');
-            document.getElementById('confirmDeleteBtn').href =
-                "<?= base_url('admin/products/delete/') ?>" + id;
-        });
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const modalBatchDetail = document.getElementById('modalBatchDetail');
-    if (modalBatchDetail) {
-        modalBatchDetail.addEventListener('show.bs.modal', function(event) {
-            let button = event.relatedTarget;
-            let productId = button.getAttribute('data-id');
-            let productName = button.getAttribute('data-name');
+                fetch(`<?= base_url('admin/products/get-batches/') ?>/${productId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        tableBody.innerHTML = '';
+                        if (!data || data.length === 0) {
+                            tableBody.innerHTML =
+                                `<tr><td colspan="5" class="text-center py-3 text-muted">Belum ada data batch aktif untuk produk ini.</td></tr>`;
+                            return;
+                        }
 
-            document.getElementById('productNameTitle').innerText = productName;
-            let tableBody = document.getElementById('batchTableBody');
-            tableBody.innerHTML =
-                `<tr><td colspan="5" class="text-center py-3 text-muted">Memuat data batch...</td></tr>`;
-
-            fetch(`<?= base_url('admin/products/get-batches/') ?>/${productId}`)
-                .then(response => response.json())
-                .then(data => {
-                    tableBody.innerHTML = '';
-                    if (!data || data.length === 0) {
-                        tableBody.innerHTML =
-                            `<tr><td colspan="5" class="text-center py-3 text-muted">Belum ada data batch aktif untuk produk ini.</td></tr>`;
-                        return;
-                    }
-
-                    data.forEach((batch) => {
-                        let row = `
+                        data.forEach((batch) => {
+                            let row = `
                             <tr>
                                 <td><span class="badge bg-light text-dark border px-2 py-1 font-monospace">${batch.batch_number}</span></td>
                                 <td class="text-center">${batch.qty_initial} Unit</td>
@@ -395,17 +399,17 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <td class="text-muted small">${batch.created_at}</td>
                             </tr>
                         `;
-                        tableBody.innerHTML += row;
+                            tableBody.innerHTML += row;
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        tableBody.innerHTML =
+                            `<tr><td colspan="5" class="text-center py-3 text-danger">Gagal memuat data batch.</td></tr>`;
                     });
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    tableBody.innerHTML =
-                        `<tr><td colspan="5" class="text-center py-3 text-danger">Gagal memuat data batch.</td></tr>`;
-                });
-        });
-    }
-});
+            });
+        }
+    });
 </script>
 
 <?= $this->endSection() ?>

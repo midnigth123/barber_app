@@ -27,6 +27,7 @@ class CreateProductsTable extends Migration
                 'type'       => 'INT',
                 'constraint' => 11,
                 'default'    => 0,
+                'null'       => true,
             ],
             'is_active' => [
                 'type'       => 'TINYINT',

@@ -28,8 +28,8 @@ class ProductController extends BaseController
 
         $productModel->save([
             'product_name'   => $productName,
-            'selling_price'  => $this->request->getPost('price'), 
-            'stock'          => $this->request->getPost('stock'),
+            'selling_price'  => $this->request->getPost('price'),
+            'stock'        => $this->request->getPost('stock') ?? 0,
             'is_active'      => 1
         ]);
 
@@ -51,7 +51,7 @@ class ProductController extends BaseController
 
         $productModel->update($id, [
             'product_name'   => $productName,
-            'selling_price'  => $this->request->getPost('price'), 
+            'selling_price'  => $this->request->getPost('price'),
             'stock'          => $this->request->getPost('stock'),
         ]);
 
@@ -69,7 +69,7 @@ class ProductController extends BaseController
     {
         $productModel = new ProductModel();
         $logModel     = new ActivityLogModel();
-        
+
         // Ambil data produk dulu sebelum dihapus agar namanya tercatat di log
         $product     = $productModel->find($id);
         $productName = $product['product_name'] ?? 'ID #' . $id;
@@ -88,13 +88,13 @@ class ProductController extends BaseController
     public function getBatches($productId)
     {
         $db = \Config\Database::connect();
-        
+
         // Ambil semua batch aktif untuk produk ini berdasarkan urutan FEFO (expired terdekat di atas)
         $batches = $db->table('product_batches')
-                    ->where('product_id', $productId)
-                    ->orderBy('expired_date', 'ASC')
-                    ->get()
-                    ->getResultArray();
+            ->where('product_id', $productId)
+            ->orderBy('expired_date', 'ASC')
+            ->get()
+            ->getResultArray();
 
         return $this->response->setJSON($batches);
     }
