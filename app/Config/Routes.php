@@ -46,11 +46,22 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
 
 
     // Route Manajemen Stok Opname
-    $routes->get('products/stock-opname', 'Master\StockOpname::index');                  
-    $routes->get('products/stock-opname/start', 'Master\StockOpname::start');             
-    $routes->get('products/stock-opname/process/(:num)', 'Master\StockOpname::process/$1'); 
+    $routes->get('products/stock-opname', 'Master\StockOpname::index');
+    $routes->get('products/stock-opname/start', 'Master\StockOpname::start');
+    $routes->get('products/stock-opname/process/(:num)', 'Master\StockOpname::process/$1');
     $routes->post('products/stock-opname/store/(:num)', 'Master\StockOpname::store/$1'); // <-- Perhatikan bagian ini!
     $routes->get('products/stock-opname/detail/(:num)', 'Master\StockOpname::detail/$1');
+
+    $routes->get('products/expenses', 'Master\Expenses::index');
+    $routes->post('products/expenses/store', 'Master\Expenses::store');
+    $routes->post('products/expenses/update/(:num)', 'Master\Expenses::update/$1'); // <-- Tambahkan baris ini
+    $routes->get('products/expenses/delete/(:num)', 'Master\Expenses::delete/$1');
+
+    // Route Manajemen Waste Produk
+    $routes->get('products/waste', 'Master\Waste::index');
+    $routes->post('products/waste/store', 'Master\Waste::store');
+    $routes->post('products/waste/update/(:num)', 'Master\Waste::update/$1'); // <-- Tambahkan baris ini
+    $routes->get('products/waste/delete/(:num)', 'Master\Waste::delete/$1');
 
     // Manajemen POS & Struk (Masuk subfolder Transaksi)
     $routes->get('pos', 'Transaksi\PosController::index');

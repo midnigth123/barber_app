@@ -1,0 +1,476 @@
+DEBUG - 2026-11-13 10:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 10:35:24 --> Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname_details' doesn't exist
+[Method: GET, Route: admin/products/stock-opname/detail/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:25 --> [Caused by] mysqli_sql_exception: Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 10:35:31 --> Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname_details' doesn't exist
+[Method: GET, Route: admin/products/stock-opname/detail/2]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 2 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 4 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 4 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 10:35:31 --> [Caused by] mysqli_sql_exception: Table 'db_barber.stock_opname_details' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `p`.`id` as `product_id`, `p`.`product_name`, `sod`.`batch_number`, `sod`.`expired_date`, `sod`.`system_stock`, `sod`.`physical_stock` as `qty_remaining`
+FROM `stock_opname_details` `sod`
+LEFT JOIN `products` `p` ON `p`.`id` = `sod`.`product_id`
+WHERE `sod`.`opname_id` = :sod.opname_id:', [...], false)
+ 5 APPPATH\Controllers\Admin\Master\StockOpname.php(174): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->detail('2')
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 10:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 10:45:17 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:210
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php(210): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_barber', 3306, '', 0)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#7 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:240
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-11-13 10:45:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 600.
+ 1 SYSTEMPATH\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock_opnames`
+ORDER BY `id` DESC', [], false)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 10:45:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:210
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php(210): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_barber', 3306, '', 0)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#7 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:240
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-11-13 10:45:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 600.
+ 1 SYSTEMPATH\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock_opnames`
+ORDER BY `id` DESC', [], false)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 10:45:35 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:210
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php(210): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_barber', 3306, '', 0)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#7 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\barber_app\system\Database\MySQLi\Connection.php:240
+Stack trace:
+#0 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(549): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\barber_app\system\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\barber_app\system\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\barber_app\app\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+#5 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+#6 C:\xampp\htdocs\barber_app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\barber_app\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\barber_app\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\barber_app\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-11-13 10:45:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/products/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 600.
+ 1 SYSTEMPATH\Database\BaseConnection.php(815): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `stock_opnames`
+ORDER BY `id` DESC', [], false)
+ 3 APPPATH\Controllers\Admin\Master\StockOpname.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\StockOpname->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\StockOpname))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 10:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 10:46:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/app.php"
+[Method: GET, Route: admin/products/expenses]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/app.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/app', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/expenses', [], true)
+ 4 APPPATH\Controllers\Admin\Master\Expenses.php(29): view('admin/products/expenses', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\Expenses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\Expenses))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 10:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 10:47:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/main.php"
+[Method: GET, Route: admin/products/expenses]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/main.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/main', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/expenses', [], true)
+ 4 APPPATH\Controllers\Admin\Master\Expenses.php(29): view('admin/products/expenses', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\Expenses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\Expenses))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 10:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 10:51:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/app.php"
+[Method: GET, Route: admin/products/expenses]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/app.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/app', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/expenses', [], true)
+ 4 APPPATH\Controllers\Admin\Master\Expenses.php(28): view('admin/products/expenses', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\Expenses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\Expenses))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 10:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 10:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 11:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 11:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 14:34:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layouts/app.php"
+[Method: GET, Route: admin/products/waste]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layouts/app.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('admin/layouts/app', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/products/waste', [], true)
+ 4 APPPATH\Controllers\Admin\Master\Waste.php(37): view('admin/products/waste', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Master\Waste->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Master\Waste))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 14:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 20:35:56 --> Table 'stock_opname_details' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('CREATE TABLE `stock_opname_details` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`opname_id` INT(11) UNSIGNED NOT NULL,
+	`batch_id` INT(11) UNSIGNED NOT NULL,
+	`system_stock` INT(11) NOT NULL,
+	`physical_stock` INT(11) NOT NULL,
+	`difference` INT(11) NOT NULL,
+	CONSTRAINT `pk_stock_opname_details` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `stock_opname_details` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`opname_id` INT(11) UNSIGNED NOT NULL,
+	`batch_id` INT(11) UNSIGNED NOT NULL,
+	`system_stock` INT(11) NOT NULL,
+	`physical_stock` INT(11) NOT NULL,
+	`difference` INT(11) NOT NULL,
+	CONSTRAINT `pk_stock_opname_details` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `stock_opname_details` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`opname_id` INT(11) UNSIGNED NOT NULL,
+	`batch_id` INT(11) UNSIGNED NOT NULL,
+	`system_stock` INT(11) NOT NULL,
+	`physical_stock` INT(11) NOT NULL,
+	`difference` INT(11) NOT NULL,
+	CONSTRAINT `pk_stock_opname_details` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(574): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `stock_opname_details` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`opname_id` INT(11) UNSIGNED NOT NULL,
+	`batch_id` INT(11) UNSIGNED NOT NULL,
+	`system_stock` INT(11) NOT NULL,
+	`physical_stock` INT(11) NOT NULL,
+	`difference` INT(11) NOT NULL,
+	CONSTRAINT `pk_stock_opname_details` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-11-09-000015_CreateStockOpnameDetailsTable.php(43): CodeIgniter\Database\Forge->createTable('stock_opname_details')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\CreateStockOpnameDetailsTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))

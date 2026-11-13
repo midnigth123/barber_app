@@ -16,17 +16,17 @@
     </div>
 
     <?php if (session()->has('success')): ?>
-    <div class="alert alert-success alert-dismissible fade show rounded-3" role="alert">
-        <i class="bi bi-check-circle me-2"></i> <?= session('success') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <div class="alert alert-success alert-dismissible fade show rounded-3" role="alert">
+            <i class="bi bi-check-circle me-2"></i> <?= session('success') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     <?php endif; ?>
 
     <?php if (session()->has('error')): ?>
-    <div class="alert alert-danger alert-dismissible fade show rounded-3" role="alert">
-        <i class="bi bi-exclamation-triangle me-2"></i> <?= session('error') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show rounded-3" role="alert">
+            <i class="bi bi-exclamation-triangle me-2"></i> <?= session('error') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     <?php endif; ?>
 
     <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
@@ -44,55 +44,55 @@
                     </thead>
                     <tbody>
                         <?php if (empty($opnameList)): ?>
-                        <tr>
-                            <td colspan="5" class="text-center py-5 text-muted">
-                                <i class="bi bi-folder2-open display-6 d-block mb-2 text-secondary"></i>
-                                Belum ada sesi stok opname. Klik tombol <strong>"Mulai Stok Opname"</strong> di atas.
-                            </td>
-                        </tr>
+                            <tr>
+                                <td colspan="5" class="text-center py-5 text-muted">
+                                    <i class="bi bi-folder2-open display-6 d-block mb-2 text-secondary"></i>
+                                    Belum ada sesi stok opname. Klik tombol <strong>"Mulai Stok Opname"</strong> di atas.
+                                </td>
+                            </tr>
                         <?php else: ?>
-                        <?php foreach ($opnameList as $row): ?>
-                        <tr>
-                            <td class="ps-4 fw-semibold text-dark">
-                                <span class="font-monospace text-primary"><?= esc($row['opname_code']) ?></span>
-                            </td>
-                            <td>
-                                <span class="text-dark small">
-                                    <i class="bi bi-calendar-event me-1 text-muted"></i> <?= esc($row['start_date']) ?>
-                                </span>
-                            </td>
-                            <td>
-                                <span class="text-dark small">
-                                    <i class="bi bi-calendar-check me-1 text-muted"></i>
-                                    <?= esc($row['end_date'] ?? 'Belum Selesai') ?>
-                                </span>
-                            </td>
-                            <td class="text-center">
-                                <?php if ($row['status'] === 'completed'): ?>
-                                <span
-                                    class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Selesai</span>
-                                <?php else: ?>
-                                <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">Sedang
-                                    Berjalan</span>
-                                <?php endif; ?>
-                            </td>
-                            <td class="text-end pe-4">
-                                <?php if ($row['status'] === 'progress'): ?>
-                                <a href="<?= base_url('admin/products/stock-opname/process/' . $row['id']) ?>"
-                                    class="btn btn-sm btn-primary rounded-3 px-3">
-                                    <i class="bi bi-pencil-square me-1"></i> Lanjut Opname
-                                </a>
-                                <?php else: ?>
-                                <!-- Tombol Modal Detail -->
-                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-3 px-3 btn-detail"
-                                    data-id="<?= $row['id'] ?>" data-bs-toggle="modal"
-                                    data-bs-target="#modalDetailOpname">
-                                    <i class="bi bi-eye me-1"></i> Detail
-                                </button>
-                                <?php endif; ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
+                            <?php foreach ($opnameList as $row): ?>
+                                <tr>
+                                    <td class="ps-4 fw-semibold text-dark">
+                                        <span class="font-monospace text-primary"><?= esc($row['opname_code']) ?></span>
+                                    </td>
+                                    <td>
+                                        <span class="text-dark small">
+                                            <i class="bi bi-calendar-event me-1 text-muted"></i> <?= esc($row['start_date']) ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="text-dark small">
+                                            <i class="bi bi-calendar-check me-1 text-muted"></i>
+                                            <?= esc($row['end_date'] ?? 'Belum Selesai') ?>
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <?php if ($row['status'] === 'completed'): ?>
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Selesai</span>
+                                        <?php else: ?>
+                                            <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">Sedang
+                                                Berjalan</span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="text-end pe-4">
+                                        <?php if ($row['status'] === 'progress'): ?>
+                                            <a href="<?= base_url('admin/products/stock-opname/process/' . $row['id']) ?>"
+                                                class="btn btn-sm btn-primary rounded-3 px-3">
+                                                <i class="bi bi-pencil-square me-1"></i> Lanjut Opname
+                                            </a>
+                                        <?php else: ?>
+                                            <!-- Tombol Modal Detail -->
+                                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-3 px-3 btn-detail"
+                                                data-id="<?= $row['id'] ?>" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetailOpname">
+                                                <i class="bi bi-eye me-1"></i> Detail
+                                            </button>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         <?php endif; ?>
                     </tbody>
                 </table>
@@ -136,7 +136,9 @@
                                     <th>Nama Produk</th>
                                     <th>No. Batch</th>
                                     <th>Expired Date</th>
+                                    <th class="text-center">Stok Sistem</th>
                                     <th class="text-center">Stok Fisik Real</th>
+                                    <th class="text-center">Selisih</th>
                                 </tr>
                             </thead>
                             <tbody id="tbl-detail-body">
@@ -155,61 +157,73 @@
 
 <!-- SCRIPT AJAX MODAL -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const detailButtons = document.querySelectorAll('.btn-detail');
+    document.addEventListener('DOMContentLoaded', function() {
+        const detailButtons = document.querySelectorAll('.btn-detail');
 
-    detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const opnameId = this.getAttribute('data-id');
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const opnameId = this.getAttribute('data-id');
 
-            // Reset tampilan modal ke mode loading
-            document.getElementById('modal-loading').style.display = 'block';
-            document.getElementById('modal-content-data').style.display = 'none';
-            document.getElementById('tbl-detail-body').innerHTML = '';
+                // Reset tampilan modal ke mode loading
+                document.getElementById('modal-loading').style.display = 'block';
+                document.getElementById('modal-content-data').style.display = 'none';
+                document.getElementById('tbl-detail-body').innerHTML = '';
 
-            // Ambil data via fetch JSON
-            fetch('<?= base_url('admin/products/stock-opname/detail/') ?>' + opnameId)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status) {
-                        document.getElementById('lbl-code').innerText = data.opnameSession
-                            .opname_code;
-                        document.getElementById('lbl-end-date').innerText = data
-                            .opnameSession.end_date ?? '-';
+                // Ambil data via fetch JSON
+                fetch('<?= base_url('admin/products/stock-opname/detail/') ?>' + opnameId)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status) {
+                            document.getElementById('lbl-code').innerText = data.opnameSession
+                                .opname_code;
+                            document.getElementById('lbl-end-date').innerText = data
+                                .opnameSession.end_date ?? '-';
 
-                        let rows = '';
-                        data.products.forEach(product => {
-                            if (product.batches && product.batches.length > 0) {
-                                product.batches.forEach(batch => {
-                                    rows += `<tr>
-                                        <td class="fw-semibold">${product.product_name}</td>
-                                        <td><span class="badge bg-light text-dark font-monospace">${batch.batch_number}</span></td>
-                                        <td><i class="bi bi-calendar-event me-1 text-muted"></i>${batch.expired_date}</td>
-                                        <td class="text-center"><span class="badge bg-primary px-3 py-2">${batch.qty_remaining}</span></td>
-                                    </tr>`;
-                                });
+                            let rows = '';
+                            data.products.forEach(product => {
+                                if (product.batches && product.batches.length > 0) {
+                                    product.batches.forEach(batch => {
+                                        // Ambil stok sistem dan stok fisik dari batch
+                                        const stokSistem = parseInt(batch.system_stock ?? batch.qty_remaining) || 0;
+                                        const stokFisik = parseInt(batch.qty_remaining) || 0; // Sesuaikan jika fisik punya inputan real
+
+                                        const selisih = stokFisik - stokSistem;
+                                        let badgeColor = selisih === 0 ? 'bg-success' : (selisih > 0 ? 'bg-primary' : 'bg-danger');
+                                        const tandaSelisih = selisih > 0 ? `+${selisih}` : selisih;
+
+                                        rows += `<tr>
+                <td class="fw-semibold">${product.product_name}</td>
+                <td><span class="badge bg-light text-dark font-monospace">${batch.batch_number}</span></td>
+                <td><i class="bi bi-calendar-event me-1 text-muted"></i>${batch.expired_date}</td>
+                <td class="text-center fw-semibold text-secondary">${stokSistem}</td>
+                <td class="text-center fw-bold text-dark">${stokFisik}</td>
+                <td class="text-center">
+                    <span class="badge ${badgeColor}">${tandaSelisih}</span>
+                </td>
+            </tr>`;
+                                    });
+                                }
+                            });
+
+                            if (rows === '') {
+                                rows =
+                                    `<tr><td colspan="6" class="text-center text-muted py-3">Tidak ada data batch untuk produk ini.</td></tr>`;
                             }
-                        });
 
-                        if (rows === '') {
-                            rows =
-                                `<tr><td colspan="4" class="text-center text-muted py-3">Tidak ada data batch untuk produk ini.</td></tr>`;
+                            document.getElementById('tbl-detail-body').innerHTML = rows;
+                            document.getElementById('modal-loading').style.display = 'none';
+                            document.getElementById('modal-content-data').style.display =
+                                'block';
+                        } else {
+                            alert(data.message || 'Gagal memuat detail.');
                         }
-
-                        document.getElementById('tbl-detail-body').innerHTML = rows;
-                        document.getElementById('modal-loading').style.display = 'none';
-                        document.getElementById('modal-content-data').style.display =
-                            'block';
-                    } else {
-                        alert(data.message || 'Gagal memuat detail.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Terjadi kesalahan saat mengambil data.');
-                });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Terjadi kesalahan saat mengambil data.');
+                    });
+            });
         });
     });
-});
 </script>
 <?= $this->endSection() ?>
