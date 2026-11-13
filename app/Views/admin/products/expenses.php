@@ -2,23 +2,43 @@
 
 <?= $this->section('content') ?>
 <div class="container-fluid px-4 py-4">
+
+    <!-- MODAL ALERT SUKSES (Auto-close 4 detik) -->
+    <?php if (session()->getFlashdata('success')): ?>
+    <div class="modal fade" id="successAlertModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4" style="background: #ffffff;">
+                <div class="mb-3 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                    style="width: 65px; height: 65px; background: rgba(212, 175, 55, 0.15); color: #b8860b; font-size: 32px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-2">Berhasil!</h5>
+                <p class="text-muted small mb-0"><?= session()->getFlashdata('success') ?></p>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var successModalEl = document.getElementById('successAlertModal');
+        var successModal = new bootstrap.Modal(successModalEl);
+        successModal.show();
+        setTimeout(function() {
+            successModal.hide();
+        }, 4000);
+    });
+    </script>
+    <?php endif; ?>
+
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h1 class="h3 fw-bold text-dark mb-1">Manajemen Pengeluaran</h1>
             <p class="text-muted small mb-0">Kelola dan pantau seluruh catatan pengeluaran operasional toko/apotek.</p>
         </div>
-        <button type="button" class="btn btn-primary rounded-3 px-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalTambahExpense">
+        <button type="button" class="btn btn-primary rounded-3 px-3 shadow-sm" data-bs-toggle="modal"
+            data-bs-target="#modalTambahExpense">
             <i class="bi bi-plus-lg me-1"></i> Tambah Pengeluaran
         </button>
     </div>
-
-    <!-- Flash Message -->
-    <?php if (session()->getFlashdata('success')): ?>
-        <div class="alert alert-success alert-dismissible fade show rounded-3" role="alert">
-            <?= session()->getFlashdata('success') ?>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-    <?php endif; ?>
 
     <!-- Card Total Pengeluaran -->
     <div class="row mb-4">
@@ -54,56 +74,58 @@
                     </thead>
                     <tbody>
                         <?php if (!empty($expenses)): ?>
-                            <?php foreach ($expenses as $row): ?>
-                                <tr>
-                                    <td class="ps-4 fw-semibold text-secondary"><?= date('d/m/Y', strtotime($row['expense_date'])) ?></td>
-                                    <td>
-                                        <span class="fw-bold text-dark"><?= esc($row['title']) ?></span>
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-light text-dark border px-2 py-1"><?= esc($row['category']) ?></span>
-                                    </td>
-                                    <td class="fw-bold text-danger">Rp <?= number_format($row['amount'], 0, ',', '.') ?></td>
-                                    <td class="text-muted small">
-                                        <?= !empty($row['description']) ? esc($row['description']) : '<span class="text-italic text-muted">-</span>' ?>
-                                    </td>
-                                    <td class="text-center">
-                                        <!-- Tombol Detail -->
-                                        <button type="button" class="btn btn-sm btn-outline-info rounded-3 me-1 btn-detail-expense"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalDetailExpense"
-                                            data-date="<?= date('d/m/Y', strtotime($row['expense_date'])) ?>"
-                                            data-title="<?= esc($row['title']) ?>"
-                                            data-category="<?= esc($row['category']) ?>"
-                                            data-amount="Rp <?= number_format($row['amount'], 0, ',', '.') ?>"
-                                            data-description="<?= esc($row['description'] ?? 'Tidak ada keterangan tambahan.') ?>">
-                                            <i class="bi bi-info-circle"></i>
-                                        </button>
+                        <?php foreach ($expenses as $row): ?>
+                        <tr>
+                            <td class="ps-4 fw-semibold text-secondary">
+                                <?= date('d/m/Y', strtotime($row['expense_date'])) ?></td>
+                            <td>
+                                <span class="fw-bold text-dark"><?= esc($row['title']) ?></span>
+                            </td>
+                            <td>
+                                <span
+                                    class="badge bg-light text-dark border px-2 py-1"><?= esc($row['category']) ?></span>
+                            </td>
+                            <td class="fw-bold text-danger">Rp <?= number_format($row['amount'], 0, ',', '.') ?></td>
+                            <td class="text-muted small">
+                                <?= !empty($row['description']) ? esc($row['description']) : '<span class="text-italic text-muted">-</span>' ?>
+                            </td>
+                            <td class="text-center">
+                                <!-- Tombol Detail -->
+                                <button type="button"
+                                    class="btn btn-sm btn-outline-info rounded-3 me-1 btn-detail-expense"
+                                    data-bs-toggle="modal" data-bs-target="#modalDetailExpense"
+                                    data-date="<?= date('d/m/Y', strtotime($row['expense_date'])) ?>"
+                                    data-title="<?= esc($row['title']) ?>" data-category="<?= esc($row['category']) ?>"
+                                    data-amount="Rp <?= number_format($row['amount'], 0, ',', '.') ?>"
+                                    data-description="<?= esc($row['description'] ?? 'Tidak ada keterangan tambahan.') ?>">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
 
-                                        <!-- Tombol Edit -->
-                                        <button type="button" class="btn btn-sm btn-outline-warning rounded-3 me-1 btn-edit-expense"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalEditExpense"
-                                            data-id="<?= $row['id'] ?>"
-                                            data-date="<?= $row['expense_date'] ?>"
-                                            data-title="<?= esc($row['title']) ?>"
-                                            data-category="<?= esc($row['category']) ?>"
-                                            data-amount="<?= $row['amount'] ?>"
-                                            data-description="<?= esc($row['description']) ?>">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
+                                <!-- Tombol Edit -->
+                                <button type="button"
+                                    class="btn btn-sm btn-outline-warning rounded-3 me-1 btn-edit-expense"
+                                    data-bs-toggle="modal" data-bs-target="#modalEditExpense"
+                                    data-id="<?= $row['id'] ?>" data-date="<?= $row['expense_date'] ?>"
+                                    data-title="<?= esc($row['title']) ?>" data-category="<?= esc($row['category']) ?>"
+                                    data-amount="<?= $row['amount'] ?>"
+                                    data-description="<?= esc($row['description']) ?>">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
 
-                                        <!-- Tombol Hapus -->
-                                        <a href="<?= base_url('admin/products/expenses/delete/' . $row['id']) ?>" class="btn btn-sm btn-outline-danger rounded-3" onclick="return confirm('Yakin ingin menghapus data pengeluaran ini?')">
-                                            <i class="bi bi-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                                <!-- Tombol Hapus -->
+                                <a href="<?= base_url('admin/products/expenses/delete/' . $row['id']) ?>"
+                                    class="btn btn-sm btn-outline-danger rounded-3"
+                                    onclick="return confirm('Yakin ingin menghapus data pengeluaran ini?')">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
                         <?php else: ?>
-                            <tr>
-                                <td colspan="6" class="text-center text-muted py-4">Belum ada data pengeluaran yang tercatat.</td>
-                            </tr>
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">Belum ada data pengeluaran yang
+                                tercatat.</td>
+                        </tr>
                         <?php endif; ?>
                     </tbody>
                 </table>
@@ -124,11 +146,13 @@
                 <div class="modal-body p-4">
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Tanggal Pengeluaran</label>
-                        <input type="date" class="form-control rounded-3" name="expense_date" value="<?= date('Y-m-d') ?>" required>
+                        <input type="date" class="form-control rounded-3" name="expense_date"
+                            value="<?= date('Y-m-d') ?>" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Judul / Keperluan</label>
-                        <input type="text" class="form-control rounded-3" name="title" placeholder="Contoh: Beli ATK / Bayar Listrik" required>
+                        <input type="text" class="form-control rounded-3" name="title"
+                            placeholder="Contoh: Beli ATK / Bayar Listrik" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Kategori</label>
@@ -142,15 +166,18 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Jumlah (Rp)</label>
-                        <input type="number" class="form-control rounded-3" name="amount" placeholder="Contoh: 50000" required>
+                        <input type="number" class="form-control rounded-3" name="amount" placeholder="Contoh: 50000"
+                            required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Keterangan Tambahan (Opsional)</label>
-                        <textarea class="form-control rounded-3" name="description" rows="2" placeholder="Catatan detail..."></textarea>
+                        <textarea class="form-control rounded-3" name="description" rows="2"
+                            placeholder="Catatan detail..."></textarea>
                     </div>
                 </div>
                 <div class="modal-footer bg-light px-4">
-                    <button type="button" class="btn btn-secondary rounded-3 px-4" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-secondary rounded-3 px-4"
+                        data-bs-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-primary rounded-3 px-4">Simpan</button>
                 </div>
             </form>
@@ -192,11 +219,13 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-semibold">Keterangan Tambahan (Opsional)</label>
-                        <textarea class="form-control rounded-3" id="edit_description" name="description" rows="2"></textarea>
+                        <textarea class="form-control rounded-3" id="edit_description" name="description"
+                            rows="2"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer bg-light px-4">
-                    <button type="button" class="btn btn-secondary rounded-3 px-4" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-secondary rounded-3 px-4"
+                        data-bs-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-primary rounded-3 px-4">Perbarui</button>
                 </div>
             </form>
@@ -243,40 +272,44 @@
     </div>
 </div>
 
-<!-- JavaScript untuk Mengisi Data ke Modal Edit & Detail -->
+<!-- JavaScript untuk Mengisi Data ke Modal Edit, Detail, & Auto-close Success Modal -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Script untuk Modal Edit
-        const editButtons = document.querySelectorAll('.btn-edit-expense');
-        editButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const date = this.getAttribute('data-date');
-                const title = this.getAttribute('data-title');
-                const category = this.getAttribute('data-category');
-                const amount = this.getAttribute('data-amount');
-                const description = this.getAttribute('data-description');
+document.addEventListener('DOMContentLoaded', function() {
+    // Script untuk Modal Edit
+    const editButtons = document.querySelectorAll('.btn-edit-expense');
+    editButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const date = this.getAttribute('data-date');
+            const title = this.getAttribute('data-title');
+            const category = this.getAttribute('data-category');
+            const amount = this.getAttribute('data-amount');
+            const description = this.getAttribute('data-description');
 
-                document.getElementById('formEditExpense').action = '<?= base_url('admin/products/expenses/update/') ?>' + id;
-                document.getElementById('edit_date').value = date;
-                document.getElementById('edit_title').value = title;
-                document.getElementById('edit_category').value = category;
-                document.getElementById('edit_amount').value = amount;
-                document.getElementById('edit_description').value = description;
-            });
-        });
-
-        // Script untuk Modal Detail
-        const detailButtons = document.querySelectorAll('.btn-detail-expense');
-        detailButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                document.getElementById('detail_date').innerText = this.getAttribute('data-date');
-                document.getElementById('detail_title').innerText = this.getAttribute('data-title');
-                document.getElementById('detail_category').innerText = this.getAttribute('data-category');
-                document.getElementById('detail_amount').innerText = this.getAttribute('data-amount');
-                document.getElementById('detail_description').innerText = this.getAttribute('data-description');
-            });
+            document.getElementById('formEditExpense').action =
+                '<?= base_url('admin/products/expenses/update/') ?>' + id;
+            document.getElementById('edit_date').value = date;
+            document.getElementById('edit_title').value = title;
+            document.getElementById('edit_category').value = category;
+            document.getElementById('edit_amount').value = amount;
+            document.getElementById('edit_description').value = description;
         });
     });
+
+    // Script untuk Modal Detail
+    const detailButtons = document.querySelectorAll('.btn-detail-expense');
+    detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            document.getElementById('detail_date').innerText = this.getAttribute('data-date');
+            document.getElementById('detail_title').innerText = this.getAttribute('data-title');
+            document.getElementById('detail_category').innerText = this.getAttribute(
+                'data-category');
+            document.getElementById('detail_amount').innerText = this.getAttribute(
+                'data-amount');
+            document.getElementById('detail_description').innerText = this.getAttribute(
+                'data-description');
+        });
+    });
+});
 </script>
 <?= $this->endSection() ?>

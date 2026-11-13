@@ -6,7 +6,8 @@ use App\Controllers\BaseController;
 use App\Models\ProductModel;
 use App\Models\TransactionModel;
 use App\Models\TransactionDetailModel;
-use App\Models\ActivityLogModel; // <-- 1. Import model log
+use App\Models\ActivityLogModel;
+use App\Models\SettingModel; // <-- Import SettingModel untuk ambil PPN
 
 class PosController extends BaseController
 {
@@ -15,12 +16,14 @@ class PosController extends BaseController
         $productModel = new ProductModel();
         $serviceModel = new \App\Models\ServiceModel();
         $userModel    = new \App\Models\UserModel();
+        $settingModel = new SettingModel();
 
         $data = [
             'title'    => 'Kasir POS - Barbershop',
             'products' => $productModel->where('is_active', 1)->findAll(),
             'services' => $serviceModel->where('is_active', 1)->findAll(),
-            'barbers'  => $userModel->where('role', 'barber')->findAll()
+            'barbers'  => $userModel->where('role', 'barber')->findAll(),
+            'setting'  => $settingModel->find(1) // Kirim data PPN/Toko ke view kasir jika diperlukan
         ];
 
         return view('admin/pos/sales', $data);
@@ -30,7 +33,8 @@ class PosController extends BaseController
     {
         $transactionModel = new TransactionModel();
         $detailModel      = new TransactionDetailModel();
-        $logModel         = new ActivityLogModel(); // <-- 2. Inisialisasi model log
+        $logModel         = new ActivityLogModel();
+        $settingModel     = new SettingModel();
 
         // Ambil data dari form POS
         $customerName  = $this->request->getPost('customer_name') ?? 'Umum';
@@ -44,11 +48,19 @@ class PosController extends BaseController
         // Generate Invoice Code otomatis
         $invoiceCode = 'INV-' . date('Ymd') . '-' . strtoupper(substr(uniqid(), -5));
 
-        // Hitung total amount keseluruhan
-        $totalAmount = 0;
+        // Hitung subtotal keseluruhan item
+        $subtotalAmount = 0;
         foreach ($cartItems as $item) {
-            $totalAmount += $item['price'] * $item['quantity'];
+            $subtotalAmount += $item['price'] * $item['quantity'];
         }
+
+        // Ambil pengaturan PPN dari database shop_settings
+        $setting = $settingModel->find(1);
+        $ppnPercentage = $setting['ppn_percentage'] ?? 0;
+        
+        // Hitung nominal PPN dan Total Akhir (Grand Total)
+        $ppnAmount = ($subtotalAmount * $ppnPercentage) / 100;
+        $totalAmount = $subtotalAmount + $ppnAmount;
 
         // 1. Simpan ke tabel transactions
         $transactionId = $transactionModel->insert([
@@ -63,17 +75,17 @@ class PosController extends BaseController
         // 2. Simpan detail item ke tabel transaction_details & kurangi stok produk
         $productModel = new ProductModel();
         foreach ($cartItems as $item) {
-            $subtotal = $item['price'] * $item['quantity'];
+            $itemSubtotal = $item['price'] * $item['quantity'];
 
             // Hitung komisi kapster (30% jika layanan, 0 jika produk)
             $commissionEarned = 0;
             if (isset($item['item_type']) && $item['item_type'] === 'service') {
                 $commissionRate = 0.30; 
-                $commissionEarned = $subtotal * $commissionRate; // Diperbaiki (menambahkan tanda *)
+                $commissionEarned = $itemSubtotal * $commissionRate; // Diperbaiki: Menggunakan tanda *
             }
 
             // Hitung pendapatan bersih toko untuk item ini (Subtotal - Komisi Kapster)
-            $shopRevenue = $subtotal - $commissionEarned; // Diperbaiki (menambahkan tanda -)
+            $shopRevenue = $itemSubtotal - $commissionEarned; // Diperbaiki: Menggunakan tanda -
 
             $detailModel->insert([
                 'transaction_id'    => $transactionId,
@@ -113,6 +125,7 @@ class PosController extends BaseController
     {
         $transactionModel = new TransactionModel();
         $detailModel      = new TransactionDetailModel();
+        $settingModel     = new SettingModel();
 
         // Ambil data transaksi utama beserta detail itemnya
         $transaction = $transactionModel->find($id);
@@ -123,11 +136,13 @@ class PosController extends BaseController
 
         // Ambil detail barang/layanan yang dibeli pada transaksi ini
         $details = $detailModel->where('transaction_id', $id)->findAll();
+        $setting = $settingModel->find(1); // Ambil info toko & logo untuk struk
 
         $data = [
             'title'       => 'Struk Pembayaran - Barber POS',
             'transaction' => $transaction,
-            'details'     => $details
+            'details'     => $details,
+            'setting'     => $setting
         ];
 
         return view('admin/pos/receipt', $data);

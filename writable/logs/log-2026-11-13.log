@@ -581,3 +581,1147 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
 13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
 14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
 15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-13 21:33:56 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseConnection.php(1813): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Database\BaseConnection.php(1841): CodeIgniter\Database\BaseConnection->getFieldNames()
+ 6 APPPATH\Database\Migrations\2026-11-02-000011_AddFefoAndBatchToInventory.php(15): CodeIgniter\Database\BaseConnection->fieldExists()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+10 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+12 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+13 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+14 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+15 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+16 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-13 21:34:50 --> Table 'activity_logs' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\Forge.php(574): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH\Database\Migrations\2026-11-02-000008_create_activity_logs_table.php(42): CodeIgniter\Database\Forge->createTable()
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\CreateActivityLogsTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+ 9 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-13 21:34:59 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseConnection.php(1813): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Database\BaseConnection.php(1841): CodeIgniter\Database\BaseConnection->getFieldNames()
+ 6 APPPATH\Database\Migrations\2026-11-02-000011_AddFefoAndBatchToInventory.php(15): CodeIgniter\Database\BaseConnection->fieldExists()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+10 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+12 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+13 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+14 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+15 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+16 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-13 21:35:50 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseConnection.php(1813): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Database\BaseConnection.php(1841): CodeIgniter\Database\BaseConnection->getFieldNames()
+ 6 APPPATH\Database\Migrations\2026-11-02-000011_AddFefoAndBatchToInventory.php(15): CodeIgniter\Database\BaseConnection->fieldExists()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+10 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+12 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+13 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+14 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+15 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+16 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-11-13 21:39:54 --> Table 'db_barber.product_purchases' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseConnection.php(1813): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Database\BaseConnection.php(1841): CodeIgniter\Database\BaseConnection->getFieldNames()
+ 6 APPPATH\Database\Migrations\2026-11-02-000011_AddFefoAndBatchToInventory.php(15): CodeIgniter\Database\BaseConnection->fieldExists()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(1024): App\Database\Migrations\AddFefoAndBatchToInventory->up()
+ 8 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate()
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+10 SYSTEMPATH\CLI\SignalTrait.php(243): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+11 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+12 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run()
+13 SYSTEMPATH\CLI\Console.php(45): CodeIgniter\CLI\Commands->run()
+14 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+15 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand()
+16 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark()
+DEBUG - 2026-11-13 21:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 21:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 21:59:56 --> Error: Class "App\Models\ProductWasteModel" not found
+[Method: GET, Route: admin/reports/waste]
+in APPPATH\Controllers\Admin\Reports\Report.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\Reports\Report->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:00:33 --> Error: Class "App\Models\WasteModel" not found
+[Method: GET, Route: admin/reports/waste]
+in APPPATH\Controllers\Admin\Reports\Report.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\Reports\Report->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:02:10 --> Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductWasteModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\Waste.php(21): App\Models\ProductWasteModel->getWasteWithProduct()
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:02:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'products.name' in 'field list'
+[Method: GET, Route: admin/reports/waste]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProductWasteModel.php(32): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\Waste.php(21): App\Models\ProductWasteModel->getWasteWithProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:02:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProductWasteModel.php(32): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\Waste.php(21): App\Models\ProductWasteModel->getWasteWithProduct()
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:02:10 --> [Caused by] mysqli_sql_exception: Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductWasteModel.php(32): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\Waste.php(21): App\Models\ProductWasteModel->getWasteWithProduct()
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:03:05 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\ProductWasteModel::getWasteWithProduct
+[Method: GET, Route: admin/reports/waste]
+in SYSTEMPATH\Model.php on line 775.
+ 1 APPPATH\Controllers\Admin\Reports\Waste.php(21): CodeIgniter\Model->__call('getWasteWithProduct', [])
+ 2 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 3 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:03:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: admin/reports/waste]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH\View\View.php(254): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/reports/waste', [], true)
+ 4 APPPATH\Controllers\Admin\Reports\Waste.php(24): view('admin/reports/waste', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 6 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 22:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 22:09:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/reports/waste_pdf.php"
+[Method: GET, Route: admin/reports/waste/export-pdf]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/reports/waste_pdf.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/reports/waste_pdf', [], true)
+ 3 APPPATH\Controllers\Admin\Reports\Waste.php(46): view('admin/reports/waste_pdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->exportPdf()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 22:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 22:32:59 --> Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductWasteModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\Waste.php(24): App\Models\ProductWasteModel->getFilteredWaste(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:32:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'products.name' in 'field list'
+[Method: GET, Route: admin/reports/waste]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ProductWasteModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\Waste.php(24): App\Models\ProductWasteModel->getFilteredWaste(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:32:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ProductWasteModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\Waste.php(24): App\Models\ProductWasteModel->getFilteredWaste(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:32:59 --> [Caused by] mysqli_sql_exception: Unknown column 'products.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `product_wastes`.*, `products`.`name` as `product_name`
+FROM `product_wastes`
+LEFT JOIN `products` ON `products`.`id` = `product_wastes`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ProductWasteModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\Waste.php(24): App\Models\ProductWasteModel->getFilteredWaste(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\Waste->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\Waste))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 22:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 22:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 22:55:21 --> Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.product_id' in 'on clause'
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:21 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:55:49 --> Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.product_id' in 'on clause'
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:55:49 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_opnames.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opnames`.*, `products`.`product_name` as `product_name`
+FROM `stock_opnames`
+LEFT JOIN `products` ON `products`.`id` = `stock_opnames`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:56:46 --> Table 'db_barber.stock_opname' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:56:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname' doesn't exist
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:56:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.stock_opname' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:56:46 --> [Caused by] mysqli_sql_exception: Table 'db_barber.stock_opname' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opname`.`opname_code`, `stock_opname`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opname` ON `stock_opname`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:57:32 --> Unknown column 'stock_opnames.opname_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:57:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.opname_date' in 'field list'
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:57:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opnames.opname_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:57:32 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_opnames.opname_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`opname_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:58:04 --> Unknown column 'stock_opname_details.stock_opname_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:58:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opname_details.stock_opname_id' in 'on clause'
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:58:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'stock_opname_details.stock_opname_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:58:04 --> [Caused by] mysqli_sql_exception: Unknown column 'stock_opname_details.stock_opname_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`stock_opname_id`
+LEFT JOIN `products` ON `products`.`id` = `stock_opname_details`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(40): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 22:59:07 --> Table 'db_barber.batches' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:59:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.batches' doesn't exist
+[Method: GET, Route: admin/reports/stock-opname]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', [], false)
+ 2 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:59:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_barber.batches' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', [], false)
+ 4 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+ 9 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 22:59:07 --> [Caused by] mysqli_sql_exception: Table 'db_barber.batches' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT `stock_opname_details`.*, `stock_opnames`.`opname_code`, `stock_opnames`.`start_date`, `products`.`product_name` as `product_name`
+FROM `stock_opname_details`
+LEFT JOIN `stock_opnames` ON `stock_opnames`.`id` = `stock_opname_details`.`opname_id`
+LEFT JOIN `batches` ON `batches`.`id` = `stock_opname_details`.`batch_id`
+LEFT JOIN `products` ON `products`.`id` = `batches`.`product_id`', [], false)
+ 5 SYSTEMPATH\Model.php(256): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\StockOpnameReportModel.php(41): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Admin\Reports\StockOpname.php(24): App\Models\StockOpnameReportModel->getFilteredStockOpname(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\StockOpname->index()
+10 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\StockOpname))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 23:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:00:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-11-13 23:04:27 --> Unknown column 'grand_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 5 APPPATH\Models\ProfitLossReportModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'grand_total' in 'field list'
+[Method: GET, Route: admin/reports/profit-loss]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 2 APPPATH\Models\ProfitLossReportModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'grand_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 4 APPPATH\Models\ProfitLossReportModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:27 --> [Caused by] mysqli_sql_exception: Unknown column 'grand_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`grand_total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 5 APPPATH\Models\ProfitLossReportModel.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-11-13 23:04:58 --> Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 5 APPPATH\Models\ProfitLossReportModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'total' in 'field list'
+[Method: GET, Route: admin/reports/profit-loss]
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 2 APPPATH\Models\ProfitLossReportModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 330.
+ 1 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 4 APPPATH\Models\ProfitLossReportModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 7 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-11-13 23:04:58 --> [Caused by] mysqli_sql_exception: Unknown column 'total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 316.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(316): mysqli->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(928): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(845): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1660): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`total`) AS `total_revenue`
+FROM `transactions`', [], false)
+ 5 APPPATH\Models\ProfitLossReportModel.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\Reports\ProfitLoss.php(22): App\Models\ProfitLossReportModel->getProfitLossData(null, null)
+ 7 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\Reports\ProfitLoss->index()
+ 8 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Reports\ProfitLoss))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 23:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-11-13 23:43:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/master/shop_settings.php"
+[Method: GET, Route: admin/settings/shop]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/master/shop_settings.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('admin/master/shop_settings', [], true)
+ 3 APPPATH\Controllers\Admin\User\SettingsController.php(72): view('admin/master/shop_settings', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(972): App\Controllers\Admin\User\SettingsController->shop()
+ 5 SYSTEMPATH\CodeIgniter.php(518): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User\SettingsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-11-13 23:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-11-13 23:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

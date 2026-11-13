@@ -4,10 +4,36 @@
 
 <div class="container-fluid px-4 py-3">
 
-    <!-- Notifikasi Flash Message -->
+    <!-- MODAL ALERT SUKSES (Auto-close 4 detik) -->
     <?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
-        <i class="bi bi-check-circle-fill me-2"></i> <?= session()->getFlashdata('success') ?>
+    <div class="modal fade" id="successAlertModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4" style="background: #ffffff;">
+                <div class="mb-3 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                    style="width: 65px; height: 65px; background: rgba(212, 175, 55, 0.15); color: #b8860b; font-size: 32px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-2">Berhasil!</h5>
+                <p class="text-muted small mb-0"><?= session()->getFlashdata('success') ?></p>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var successModalEl = document.getElementById('successAlertModal');
+        var successModal = new bootstrap.Modal(successModalEl);
+        successModal.show();
+        setTimeout(function() {
+            successModal.hide();
+        }, 4000);
+    });
+    </script>
+    <?php endif; ?>
+
+    <!-- Notifikasi Error (jika ada) tetap dipertahankan dengan alert biasa -->
+    <?php if (session()->has('error')): ?>
+    <div class="alert alert-danger alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+        <i class="bi bi-exclamation-triangle me-2"></i> <?= session('error') ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php endif; ?>
@@ -76,18 +102,5 @@
         </div>
     </div>
 </div>
-
-<!-- Script untuk menghilangkan alert otomatis setelah 4 detik -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let alerts = document.querySelectorAll('.alert');
-    alerts.forEach(function(alert) {
-        setTimeout(function() {
-            let bsAlert = new bootstrap.Alert(alert);
-            bsAlert.close();
-        }, 4000);
-    });
-});
-</script>
 
 <?= $this->endSection() ?>

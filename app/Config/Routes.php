@@ -77,6 +77,12 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('reports/transaction-detail/(:num)', 'Transaksi\ReportController::getDetail/$1');
     $routes->post('reports/cancel-transaction/(:num)', 'Transaksi\ReportController::cancel/$1');
 
+    // Report Waste , Pengeluaran, Stock Opname, Laba rugi
+    $routes->get('reports/waste', 'Reports\Waste::index');
+    $routes->get('reports/expenses', 'Reports\Expenses::index');
+    $routes->get('reports/stock-opname', 'Reports\StockOpname::index');
+    $routes->get('reports/profit-loss', 'Reports\ProfitLoss::index');
+
     // Manajemen Pengguna & Logs
     $routes->get('users', 'User\UserController::index');
     $routes->post('users/store', 'User\UserController::store');
@@ -87,5 +93,9 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->get('users/logs', 'User\LogController::index');
     $routes->get('users/roles', 'User\RoleController::index');
     $routes->post('users/roles/update/(:segment)', 'User\RoleController::updatePermission/$1');
-    $routes->get('users/settings', 'User\SettingController::index');
+    $routes->get('users/settings', 'User\SettingsController::index');
+    $routes->post('users/settings/update', 'User\SettingsController::update');
+
+    $routes->get('settings/shop', 'User\SettingsController::shop');
+    $routes->post('settings/shop/update', 'User\SettingsController::updateShop');
 });

@@ -4,14 +4,30 @@
 
 <div class="container-fluid px-4 py-3">
 
-    <!-- Notifikasi Berhasil (Flashdata) -->
+    <!-- MODAL ALERT SUKSES (Auto-close 4 detik) -->
     <?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success alert-dismissible fade show rounded-4 border-0 shadow-sm mb-4" role="alert"
-        style="background-color: #d1e7dd; color: #0f5132;">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        <?= session()->getFlashdata('success') ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="modal fade" id="successAlertModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4" style="background: #ffffff;">
+                <div class="mb-3 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm"
+                    style="width: 65px; height: 65px; background: rgba(212, 175, 55, 0.15); color: #b8860b; font-size: 32px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-2">Berhasil!</h5>
+                <p class="text-muted small mb-0"><?= session()->getFlashdata('success') ?></p>
+            </div>
+        </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var successModalEl = document.getElementById('successAlertModal');
+        var successModal = new bootstrap.Modal(successModalEl);
+        successModal.show();
+        setTimeout(function() {
+            successModal.hide();
+        }, 4000);
+    });
+    </script>
     <?php endif; ?>
 
     <!-- Header & Tombol Tambah -->
@@ -221,7 +237,8 @@
                 </div>
                 <h5 class="fw-bold text-dark mb-2">Aktifkan Kembali?</h5>
                 <p class="text-muted small mb-4">Apakah Anda yakin ingin mengaktifkan akun
-                    <strong><?= $usr['name'] ?></strong> agar bisa login kembali?</p>
+                    <strong><?= $usr['name'] ?></strong> agar bisa login kembali?
+                </p>
                 <div class="d-flex justify-content-center gap-2">
                     <button type="button" class="btn btn-light btn-sm rounded-3 px-3 fw-semibold"
                         data-bs-dismiss="modal">Batal</button>
@@ -234,7 +251,8 @@
                 </div>
                 <h5 class="fw-bold text-dark mb-2">Nonaktifkan User?</h5>
                 <p class="text-muted small mb-4">Apakah Anda yakin ingin menonaktifkan akun
-                    <strong><?= $usr['name'] ?></strong>? User tidak akan bisa login ke sistem.</p>
+                    <strong><?= $usr['name'] ?></strong>? User tidak akan bisa login ke sistem.
+                </p>
                 <div class="d-flex justify-content-center gap-2">
                     <button type="button" class="btn btn-light btn-sm rounded-3 px-3 fw-semibold"
                         data-bs-dismiss="modal">Batal</button>
@@ -249,16 +267,5 @@
 
 <?php endforeach; ?>
 <?php endif; ?>
-
-<!-- Script Auto-Close Alert -->
-<script>
-setTimeout(function() {
-    let alertEl = document.querySelector('.alert-success');
-    if (alertEl) {
-        let alert = new bootstrap.Alert(alertEl);
-        alert.close();
-    }
-}, 3000);
-</script>
 
 <?= $this->endSection() ?>

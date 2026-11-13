@@ -4,12 +4,26 @@
 
 <div class="container-fluid px-4 py-3">
 
-    <!-- Notifikasi Flash Message -->
+    <!-- Notifikasi Flash Message dengan Auto-Close 4 Detik -->
     <?php if (session()->getFlashdata('success')): ?>
-    <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+    <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert"
+        id="notificationAlert">
         <i class="bi bi-check-circle-fill me-2"></i> <?= session()->getFlashdata('success') ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            let alertElement = document.getElementById('notificationAlert');
+            if (alertElement) {
+                let alert = bootstrap.Alert.getInstance(alertElement) || new bootstrap.Alert(
+                    alertElement);
+                alert.close();
+            }
+        }, 4000); // Waktu 4000 milidetik = 4 detik
+    });
+    </script>
     <?php endif; ?>
 
     <!-- Header Halaman -->
