@@ -21,7 +21,7 @@ class AddColumnsToTransactions extends Migration
                 'after'      => 'status',
             ],
         ];
-        
+
         $this->forge->addColumn('transactions', $fields);
     }
 
